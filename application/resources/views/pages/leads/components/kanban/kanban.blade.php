@@ -1,4 +1,4 @@
-<div class="boards count-{{ $leads }} js-trigger-leads-kanban-board" id="leads-view-wrapper" data-position="{{ url('leads/update-position') }}">
+<div class="boards count-{{ @count($leads) }} js-trigger-leads-kanban-board" id="leads-view-wrapper" data-position="{{ url('leads/update-position') }}">
     <!--each board-->
     @foreach($boards as $board)
     <!--board-->
