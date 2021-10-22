@@ -4,7 +4,7 @@
 
     <!--HEADER-->
     <div class="setup-header">
-        <div class="x-logo font-16 font-weight-600">GROW CRM - SETUP</div>
+        <div class="x-logo font-16 font-weight-600">THE SIGN SHOP CRM - SETUP</div>
     </div>
     <div class="setup-wrapper">
         <!--PROGRESS-->
