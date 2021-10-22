@@ -6,8 +6,8 @@
     RewriteEngine On
 
     # option to force redirect to ssl (https) - uncomment the two lines below
-    # RewriteCond %{HTTPS} !=on    
-    # RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+    RewriteCond %{HTTPS} !=on    
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
