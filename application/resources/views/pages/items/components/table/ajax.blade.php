@@ -24,7 +24,7 @@
     <td class="items_col_rate" id="items_col_rate_{{ $item->item_id }}">
         {{ runtimeMoneyFormat($item->item_rate) }}
     </td>
-    <td class="items_col_unit" id="items_col_unit_{{ $item->item_id }}">{{ $item->item_unit }}</td>
+    {{-- <td class="items_col_unit" id="items_col_unit_{{ $item->item_id }}">{{ $item->item_unit }}</td> --}}
     @if(config('visibility.items_col_category'))
     <td class="items_col_category ucwords" id="items_col_category_{{ $item->item_id }}">
         {{ str_limit($item->category_name ?? '---', 30) }}</td>
