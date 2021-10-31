@@ -26,11 +26,11 @@
                                 data-url="{{ urlResource('/items?action=sort&orderby=item_rate&sortorder=asc') }}">{{ cleanLang(__('lang.rate')) }}<span
                                     class="sorting-icons"><i class="ti-arrows-vertical"></i></span></a>
                         </th>
-                        <th class="items_col_unit"><a class="js-ajax-ux-request js-list-sorting" id="sort_item_unit"
+                        {{-- <th class="items_col_unit"><a class="js-ajax-ux-request js-list-sorting" id="sort_item_unit"
                                 href="javascript:void(0)"
                                 data-url="{{ urlResource('/items?action=sort&orderby=item_unit&sortorder=asc') }}">{{ cleanLang(__('lang.unit')) }}<span
                                     class="sorting-icons"><i class="ti-arrows-vertical"></i></span></a>
-                        </th>
+                        </th> --}}
                         @if(config('visibility.items_col_category'))
                         <th class="items_col_category"><a class="js-ajax-ux-request js-list-sorting" id="sort_category"
                                 href="javascript:void(0)"

@@ -20,8 +20,18 @@
     </td>
     <!--unit-->
     <td class="form-group x-unit bill_col_unit">
-        <input class="form-control form-control-sm js_item_unit js_line_validation_item" type="text"
-            name="js_item_unit[{{ $lineitem->lineitem_id ?? '' }}]" value="{{ $lineitem->lineitem_unit ?? '' }}">
+        <!--height-->
+        <div class="input-group input-group-sm m-b-4">
+            <span class="input-group-addon" id="fx-line-item-hrs">{{ cleanLang(__('lang.units_height')) }}</span>
+            <input type="number" class="form-control js_item_hours calculation-element js_line_validation_item" name="js_item_hours[{{ $lineitem->lineitem_id ?? '' }}]" value="{{ $lineitem->lineitem_time_hours ?? '' }}">
+        </div>
+        <!--width-->
+        <div class="input-group input-group-sm">
+            <span class="input-group-addon" id="fx-line-item-min">{{ cleanLang(__('lang.units_width')) }}</span>
+            <input type="number" class="form-control js_item_minutes calculation-element js_line_validation_item" name="js_item_minutes[{{ $lineitem->lineitem_id ?? '' }}]" value="{{ $lineitem->lineitem_time_minutes ?? '' }}">
+        </div>
+        {{-- <input class="form-control form-control-sm js_item_unit js_line_validation_item" type="text"
+            name="js_item_unit[{{ $lineitem->lineitem_id ?? '' }}]" value="{{ $lineitem->lineitem_unit ?? '' }}"> --}}
     </td>
     <!--rate-->
     <td class="form-group x-price bill_col_price">
