@@ -444,7 +444,7 @@
 
 
                 <!--Other-->
-                <li class="sidenav-menu-item">
+                {{-- <li class="sidenav-menu-item">
                     <a class="has-arrow waves-effect waves-dark" href="javascript:void(0);" aria-expanded="false"
                         id="settings-menu-other">
                         <span class="hide-menu">{{ cleanLang(__('lang.other')) }}
@@ -455,7 +455,7 @@
                                 class="settings-menu-link js-ajax-ux-request js-submenu-ajax js-dynamic-settings-url">{{ cleanLang(__('lang.updates')) }}</a>
                         </li>
                     </ul>
-                </li>
+                </li> --}}
             </ul>
         </nav>
         <!-- End Sidebar navigation -->
