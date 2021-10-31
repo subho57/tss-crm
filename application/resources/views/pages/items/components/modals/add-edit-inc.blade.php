@@ -33,7 +33,7 @@
             </div>
         </div>
         <!-- width -->
-        <div class="form-group row">
+        <!-- <div class="form-group row">
             <label class="col-sm-12 col-lg-3 text-left control-label col-form-label  required">{{ cleanLang(__('lang.units_width')) }}*
                 <span class="align-middle text-info font-16" data-toggle="tooltip" title="{{ cleanLang(__('lang.units_examples')) }}"
                     data-placement="top"><i class="ti-info-alt"></i></span></label>
@@ -41,7 +41,7 @@
                 <input type="text" class="form-control form-control-sm" id="item_unit" name="item_unit"
                     value="{{ $item->item_unit ?? '' }}">
             </div>
-        </div>
+        </div> -->
 
 
         <!--category-->
