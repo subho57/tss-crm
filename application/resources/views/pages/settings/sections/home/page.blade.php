@@ -19,10 +19,10 @@
                     </h2>
             </div>
 
-            <div class="m-t-20">
+            {{-- <div class="m-t-20">
                 <a href="{{ url('/app/settings/updates') }}"
                     class="btn btn-rounded-x btn-sm btn-danger waves-effect text-left">@lang('lang.check_for_updates')</a>
-            </div>
+            </div> --}}
         </div>
     </div>
 </div>
