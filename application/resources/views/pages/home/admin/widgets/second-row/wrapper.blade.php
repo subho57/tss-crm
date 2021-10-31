@@ -3,11 +3,13 @@
     <!--INCOME-->
     {{-- @include('pages.home.admin.widgets.second-row.income') --}}
 
-    <!--COMMENTS-->
-    @include('pages.home.admin.widgets.third-row.comments')
+    <!--PROJECTS-->
+    @include('pages.home.admin.widgets.third-row.projects')
 
     <!--LEADS-->
     @include('pages.home.admin.widgets.second-row.leads')
 
+    <!--TIMELINE-->
+    @include('pages.home.admin.widgets.third-row.events')
 
 </div>
