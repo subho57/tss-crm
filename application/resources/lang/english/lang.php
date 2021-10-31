@@ -1454,7 +1454,7 @@ return [
     'unit_is_invalid' => "Unit is invalid",
     'unit' => "bar",
     'unit' => "Unit",
-    'units_examples' => "Example (in mm)",
+    'units_examples' => "Example (in mm<sup>2</sup>)",
     'units_no_html' => "Units should not contain any HTML",
     'units' => "Units",
     'units_height' => "Height",
