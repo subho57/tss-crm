@@ -474,8 +474,8 @@ class EstimateRepository {
                         'lineitemresource_type' => 'estimate',
                         'lineitemresource_id' => $bill_estimateid,
                         'lineitem_time_timers_list' => null,
-                        'lineitem_time_hours' => null,
-                        'lineitem_time_minutes' => null,
+                        'lineitem_time_hours' => request('js_item_hours')[$key],
+                        'lineitem_time_minutes' => request('js_item_minutes')[$key],
                     ];
                     $this->lineitemrepo->create($line);
                 }
