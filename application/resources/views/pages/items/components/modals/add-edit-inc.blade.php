@@ -32,6 +32,16 @@
             </div>
         </div>
 
+        <div class="form-group row">
+            <label class="col-sm-12 col-lg-3 text-left control-label col-form-label  required">{{ cleanLang(__('lang.units')) }}*
+                <span class="align-middle text-info font-16" data-toggle="tooltip" title="{{ cleanLang(__('lang.units_examples')) }}"
+                    data-placement="top"><i class="ti-info-alt"></i></span></label>
+            <div class="col-sm-12 col-lg-9">
+                <input type="text" class="form-control form-control-sm" id="item_unit" name="item_unit1"
+                    value="{{ $item->item_unit1 ?? '' }}">
+            </div>
+        </div>
+
         <!--category-->
         <div class="form-group row">
             <label
