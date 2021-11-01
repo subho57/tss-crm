@@ -9556,7 +9556,8 @@ textarea.error {
 * form and elements
 * -------------------------------------------------------*/
 .input-group-addon {
-  font-size: 0.9rem; }
+  color:red;
+  font-size: 0.5rem; }
 
 /**-------------------------------------------------------
 * dropzone - fileupload
