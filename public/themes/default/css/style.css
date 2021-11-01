@@ -11358,7 +11358,7 @@ div.boards::-webkit-scrollbar {
       min-width: 120px; }
     .invoice .invoice-wrapper .invoice-table-wrapper .billing-line-item .bill_col_unit,
     .estimate .invoice-wrapper .invoice-table-wrapper .billing-line-item .bill_col_unit {
-      min-width: 120px; }
+      min-width: 140px; }
     .invoice .invoice-wrapper .invoice-table-wrapper .billing-line-item .bill_col_price,
     .estimate .invoice-wrapper .invoice-table-wrapper .billing-line-item .bill_col_price {
       min-width: 120px; }
