@@ -465,7 +465,7 @@ class EstimateRepository {
                         'lineitem_description' => request('js_item_description')[$key],
                         'lineitem_quantity' => request('js_item_quantity')[$key],
                         'lineitem_rate' => request('js_item_rate')[$key],
-                        'lineitem_unit' => request('js_item_unit')[$key],
+                        'lineitem_unit' => request('js_item_unit_height')[$key] . "x" . request('js_item_unit_width')[$key],
                         'lineitem_total' => request('js_item_total')[$key],
                         'lineitemresource_linked_type' => request('js_item_linked_type')[$key],
                         'lineitemresource_linked_id' => request('js_item_linked_id')[$key],
@@ -474,8 +474,8 @@ class EstimateRepository {
                         'lineitemresource_type' => 'estimate',
                         'lineitemresource_id' => $bill_estimateid,
                         'lineitem_time_timers_list' => null,
-                        'lineitem_time_hours' => request('js_item_hours')[$key],
-                        'lineitem_time_minutes' => request('js_item_minutes')[$key],
+                        'lineitem_time_hours' => null,
+                        'lineitem_time_minutes' => null,
                     ];
                     $this->lineitemrepo->create($line);
                 }

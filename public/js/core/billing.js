@@ -214,6 +214,8 @@ NXINVOICE.DOM.itemNewLine = function (data = {}) {
 
     //get data is any was provided
     var item_unit = (data.item_unit != null) ? data.item_unit : '';
+    var item_unit_height = (data.item_unit_height != null) ? data.item_unit_height : '';
+    var item_unit_width = (data.item_unit_width != null) ? data.item_unit_width : '';
     var item_quantity = (data.item_quantity != null) ? data.item_quantity : '';
     var item_description = (data.item_description != null) ? data.item_description : '';
     var item_rate = (data.item_rate != null) ? data.item_rate : '';
@@ -240,6 +242,8 @@ NXINVOICE.DOM.itemNewLine = function (data = {}) {
     lineitem.find(".js_item_description").html(item_description);
     lineitem.find(".js_item_quantity").val(item_quantity);
     lineitem.find(".js_item_unit").val(item_unit);
+    lineitem.find(".js_item_unit_height").val(item_unit_height);
+    lineitem.find(".js_item_unit_width").val(item_unit_width);
     lineitem.find(".js_item_rate").val(item_rate);
     lineitem.find(".js_item_total").val(item_total);
     lineitem.find(".js_item_linked_type").val(item_linked_type);
@@ -256,6 +260,8 @@ NXINVOICE.DOM.itemNewLine = function (data = {}) {
     lineitem.find(".js_item_description").attr("name", "js_item_description[" + uniqueid + "]");
     lineitem.find(".js_item_quantity").attr("name", "js_item_quantity[" + uniqueid + "]");
     lineitem.find(".js_item_unit").attr("name", "js_item_unit[" + uniqueid + "]");
+    lineitem.find(".js_item_unit_height").attr("name", "js_item_unit_height[" + uniqueid + "]");
+    lineitem.find(".js_item_unit_width").attr("name", "js_item_unit_width[" + uniqueid + "]");
     lineitem.find(".js_item_rate").attr("name", "js_item_rate[" + uniqueid + "]");
     lineitem.find(".js_item_total").attr("name", "js_item_total[" + uniqueid + "]");
     lineitem.find(".js_linetax_rate").attr("name", "js_linetax_rate[" + uniqueid + "]");
@@ -373,6 +379,8 @@ NXINVOICE.CALC.recalculateLines = function () {
         var description = lineitem.find(".js_item_description");
         var quantity = lineitem.find(".js_item_quantity").val();
         var unit = lineitem.find(".js_item_unit").val();
+        var unit_height = lineitem.find(".js_item_unit_height").val();
+        var unit_width = lineitem.find(".js_item_unit_width").val();
         var rate = lineitem.find(".js_item_rate").val();
         var total = lineitem.find(".js_item_total");
         var selected_taxes = lineitem.find(".js_linetax_rate");
@@ -400,6 +408,20 @@ NXINVOICE.CALC.recalculateLines = function () {
          * ignore if this is the currently focused item
          * [02-04-2021]
          * --------------------------------------------------*/
+         if (unit_height == '' || unit_height == null) {
+            if (lineitem.find(".js_item_unit_height").is(":focus")) {
+                //do nothing
+            } else {
+                lineitem.find(".js_item_unit_height").val(0);
+            }
+        }
+        if (unit_width == '' || unit_width == null) {
+            if (lineitem.find(".js_item_unit_width").is(":focus")) {
+                //do nothing
+            } else {
+                lineitem.find(".js_item_unit_width").val(0);
+            }
+        }
         if (hours == '' || hours == null) {
             if (lineitem.find(".js_item_hours").is(":focus")) {
                 //do nothing
@@ -420,9 +442,10 @@ NXINVOICE.CALC.recalculateLines = function () {
          * --------------------------------------------------*/
         if (type == 'plain') {
             //if row is valid, workout total
-            if (quantity > 0 && rate > 0) {
+            if (quantity > 0 && rate > 0 && unit_width > 0 && unit_height > 0) {
                 //line total and tax
-                var linetotal = quantity * rate;
+                var sqmm = unit_width * unit_height / 1000000;
+                var linetotal = quantity * rate * sqmm;
                 total.val(nxFormatDecimal(linetotal));
                 //work out tax
                 var linetax = linetotal * line_tax / 100;
@@ -1066,6 +1089,8 @@ NXINVOICE.CALC.validateLines = function (self) {
         var $hours = lineitem.find(".js_item_hours");
         var $minutes = lineitem.find(".js_item_minutes");
         var $unit = lineitem.find(".js_item_unit");
+        var $unit_height = lineitem.find(".js_item_unit_height");
+        var $unit_width = lineitem.find(".js_item_unit_width");
         var $rate = lineitem.find(".js_item_rate");
         var $type = lineitem.find(".js_item_type");
 
@@ -1074,6 +1099,8 @@ NXINVOICE.CALC.validateLines = function (self) {
         $description.removeClass('error');
         $quantity.removeClass('error');
         $unit.removeClass('error');
+        $unit_height.removeClass('error');
+        $unit_width.removeClass('error');
         $rate.removeClass('error');
         $hours.removeClass('error');
         $minutes.removeClass('error');
@@ -1089,6 +1116,14 @@ NXINVOICE.CALC.validateLines = function (self) {
             if ($quantity.val() == '' || $quantity.val() <= 0) {
                 $quantity.addClass('error');
                 count_bill_error++;
+            }
+            if ($unit_height.val() == '' || $unit_height.val() == null) {
+                //just set to zero
+                $unit_height.val(0);
+            }
+            if ($unit_width.val() == '' || $unit_width.val() == null) {
+                //if unit_width are also 0 then show error
+                $unit_width.val(0);
             }
         }
 
@@ -1144,7 +1179,7 @@ NXINVOICE.DOM.revalidateItem = function (self) {
     }
 
     //validate rate & quantity
-    if (self.hasClass('js_item_rate') || self.hasClass('js_item_quantity') || self.hasClass('js_item_hours') || self.hasClass('js_item_minutes')) {
+    if (self.hasClass('js_item_rate') || self.hasClass('js_item_quantity') || self.hasClass('js_item_hours') || self.hasClass('js_item_minutes') || self.hasClass('js_item_unit_height') || self.hasClass('js_item_unit_width')) {
         if (self.hasClass('error') && self.val() > 0) {
             self.removeClass('error')
         }
