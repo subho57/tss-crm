@@ -11361,7 +11361,10 @@ div.boards::-webkit-scrollbar {
       min-width: 160px; }
     .invoice .invoice-wrapper .invoice-table-wrapper .billing-line-item .bill_col_price,
     .estimate .invoice-wrapper .invoice-table-wrapper .billing-line-item .bill_col_price {
-      min-width: 100px; }
+      min-width: 100px;
+      max-width: 100px;
+      width: auto;
+     }
     .invoice .invoice-wrapper .invoice-table-wrapper .billing-line-item .bill_col_total,
     .estimate .invoice-wrapper .invoice-table-wrapper .billing-line-item .bill_col_total {
       min-width: 120px; }
