@@ -23,12 +23,12 @@
         <!--height-->
         <div class="input-group input-group-sm m-b-4">
             <span class="input-group-addon" id="fx-line-item-hrs">{{ cleanLang(__('lang.units_height')) }}</span>
-            <input type="number" class="form-control js_item_unit_height calculation-element js_line_validation_item" name="js_item_unit_height[{{ $lineitem->lineitem_id ?? '' }}]" value="{{ explode("x", $lineitem->lineitem_unit)[0] ?? '' }}">
+            <input type="number" class="form-control js_item_unit_height calculation-element js_line_validation_item" name="js_item_unit_height[{{ $lineitem->lineitem_id ?? '' }}]" value="{{ $lineitem->lineitem_unit_height ?? '' }}">
         </div>
         <!--width-->
         <div class="input-group input-group-sm">
             <span class="input-group-addon" id="fx-line-item-min">{{ cleanLang(__('lang.units_width')) }}</span>
-            <input type="number" class="form-control js_item_unit_width calculation-element js_line_validation_item" name="js_item_unit_width[{{ $lineitem->lineitem_id ?? '' }}]" value="{{ explode("x", $lineitem->lineitem_unit)[1] ?? '' }}">
+            <input type="number" class="form-control js_item_unit_width calculation-element js_line_validation_item" name="js_item_unit_width[{{ $lineitem->lineitem_id ?? '' }}]" value="{{ $lineitem->lineitem_unit_width ?? '' }}">
         </div>
         {{-- <input class="form-control form-control-sm js_item_unit js_line_validation_item" type="text"
             name="js_item_unit[{{ $lineitem->lineitem_id ?? '' }}]" value="{{ $lineitem->lineitem_unit ?? '' }}"> --}}
