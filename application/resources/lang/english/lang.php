@@ -1457,7 +1457,7 @@ return [
     'units_examples' => "Example (in mm<sup>2</sup>)",
     'units_no_html' => "Units should not contain any HTML",
     'units' => "Units",
-    'units_height' => 'Heig &lt;br&gt; ht',
+    'units_height' => 'Heig\r\nht',
     'units_width' => "Width",
     'unknown' => "Unknown",
     'update_avatar' => "Update Avatar",
