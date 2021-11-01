@@ -11478,6 +11478,7 @@ div.boards::-webkit-scrollbar {
   min-height: 200px; }
 
 #fx-line-item-hrs {
+  color:red;
   width: 70px;
   font-size: 8px !important; }
 
