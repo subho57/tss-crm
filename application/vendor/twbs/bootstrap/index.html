@@ -56,7 +56,7 @@ gem install bootstrap -v {{ site.current_ruby_version }}
 
 <h5>CSS only</h5>
 {% highlight html %}
-<link rel="stylesheet" href="{{ site.cdn.css }}" integrity="{{ site.cdn.css_hash }}" crossorigin="anonymous">
+<link rel="stylesheet" href="{{ site.cdn.css.time() }}" integrity="{{ site.cdn.css_hash }}" crossorigin="anonymous">
 {% endhighlight %}
 
 <h5>JS, Popper.js, and jQuery</h5>
