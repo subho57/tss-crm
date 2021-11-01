@@ -22,8 +22,8 @@
     <td class="form-group x-unit bill_col_unit">
         <!--height-->
         <div class="input-group input-group-sm">
-            <span class="input-group-addon" id="fx-line-item-hrs" >{{ cleanLang(__('lang.units_height')) }}</span>
-            <input type="number" class="form-control js_item_unit_height calculation-element js_line_validation_item" name="js_item_unit_height[{{ $lineitem->lineitem_id ?? '' }}]" value="{{ $lineitem->lineitem_unit_height ?? '' }}">
+            <span class="input-group-addon mb-1 pb-5" id="fx-line-item-hrs" >{{ cleanLang(__('lang.units_height')) }}</span>
+            <input type="number pb-5" class="form-control js_item_unit_height calculation-element js_line_validation_item" name="js_item_unit_height[{{ $lineitem->lineitem_id ?? '' }}]" value="{{ $lineitem->lineitem_unit_height ?? '' }}">
         </div>
         <!--width-->
         <div class="input-group input-group-sm">
