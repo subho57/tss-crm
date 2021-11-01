@@ -11478,11 +11478,11 @@ div.boards::-webkit-scrollbar {
   min-height: 200px; }
 
 #fx-line-item-hrs {
-  width: 90%;
+  width: 70px;
   font-size: 10px !important; }
 
 #fx-line-item-min {
-  width: 90%;
+  width: 70px;
   font-size: 10px !important; }
 
 #fx-estimate-date-lang,
