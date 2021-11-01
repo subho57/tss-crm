@@ -11343,7 +11343,7 @@ div.boards::-webkit-scrollbar {
       min-width: 350px; }
     .invoice .invoice-wrapper .invoice-table-wrapper .invoice-table.editing th.x-quantity,
     .estimate .invoice-wrapper .invoice-table-wrapper .invoice-table.editing th.x-quantity {
-      width: 110px; }
+      width: 80px; }
     .invoice .invoice-wrapper .invoice-table-wrapper .invoice-table.editing th.x-unit,
     .estimate .invoice-wrapper .invoice-table-wrapper .invoice-table.editing th.x-unit {
       width: 150px; }
@@ -11355,7 +11355,7 @@ div.boards::-webkit-scrollbar {
       width: auto; }
     .invoice .invoice-wrapper .invoice-table-wrapper .billing-line-item .bill_col_quantity,
     .estimate .invoice-wrapper .invoice-table-wrapper .billing-line-item .bill_col_quantity {
-      min-width: 100px; }
+      min-width: 80px; }
     .invoice .invoice-wrapper .invoice-table-wrapper .billing-line-item .bill_col_unit,
     .estimate .invoice-wrapper .invoice-table-wrapper .billing-line-item .bill_col_unit {
       min-width: 140px; }
