@@ -11346,7 +11346,7 @@ div.boards::-webkit-scrollbar {
       width: 80px; }
     .invoice .invoice-wrapper .invoice-table-wrapper .invoice-table.editing th.x-unit,
     .estimate .invoice-wrapper .invoice-table-wrapper .invoice-table.editing th.x-unit {
-      width: 170px; }
+      width: 160px; }
     .invoice .invoice-wrapper .invoice-table-wrapper .invoice-table.editing th.x-tax,
     .estimate .invoice-wrapper .invoice-table-wrapper .invoice-table.editing th.x-tax {
       width: auto; }
