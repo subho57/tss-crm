@@ -11343,10 +11343,10 @@ div.boards::-webkit-scrollbar {
       min-width: 350px; }
     .invoice .invoice-wrapper .invoice-table-wrapper .invoice-table.editing th.x-quantity,
     .estimate .invoice-wrapper .invoice-table-wrapper .invoice-table.editing th.x-quantity {
-      width: 130px; }
+      width: 110px; }
     .invoice .invoice-wrapper .invoice-table-wrapper .invoice-table.editing th.x-unit,
     .estimate .invoice-wrapper .invoice-table-wrapper .invoice-table.editing th.x-unit {
-      width: 130px; }
+      width: 150px; }
     .invoice .invoice-wrapper .invoice-table-wrapper .invoice-table.editing th.x-tax,
     .estimate .invoice-wrapper .invoice-table-wrapper .invoice-table.editing th.x-tax {
       width: auto; }
@@ -11358,7 +11358,7 @@ div.boards::-webkit-scrollbar {
       min-width: 120px; }
     .invoice .invoice-wrapper .invoice-table-wrapper .billing-line-item .bill_col_unit,
     .estimate .invoice-wrapper .invoice-table-wrapper .billing-line-item .bill_col_unit {
-      min-width: 140px; }
+      min-width: 120px; }
     .invoice .invoice-wrapper .invoice-table-wrapper .billing-line-item .bill_col_price,
     .estimate .invoice-wrapper .invoice-table-wrapper .billing-line-item .bill_col_price {
       min-width: 120px; }
