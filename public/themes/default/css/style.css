@@ -9059,18 +9059,18 @@ a.link:hover, a.link:focus {
   min-height: 31px !important; }
 
 .input-group-addon {
-  font-size: 11px !important;
+  font-size: 13px !important;
   min-height: 31px !important;
-  /* padding: 5px; */
+  padding: 5px 10px;
   border: 1px solid #ced4da;
   border-right: none;
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px; }
 
 .input-group-sm .input-group-addon {
-  font-size: 11px !important;
+  font-size: 13px !important;
   min-height: 31px !important;
-  /* padding: 5px; */
+  padding: 5px 10px;
   border: 1px solid #ced4da;
   border-right: none;
   border-top-left-radius: 4px;
@@ -9556,8 +9556,7 @@ textarea.error {
 * form and elements
 * -------------------------------------------------------*/
 .input-group-addon {
-  color:red;
-  font-size: 0.5rem; }
+  font-size: 0.9rem; }
 
 /**-------------------------------------------------------
 * dropzone - fileupload
@@ -11479,13 +11478,12 @@ div.boards::-webkit-scrollbar {
   min-height: 200px; }
 
 #fx-line-item-hrs {
-  color:red;
-  width: 100px;
-  font-size: 8px !important; }
+  width: 50px;
+  font-size: 12px !important; }
 
 #fx-line-item-min {
-  width: 70px;
-  font-size: 8px !important; }
+  width: 50px;
+  font-size: 12px !important; }
 
 #fx-estimate-date-lang,
 #fx-estimate-date-lang,
