@@ -441,13 +441,13 @@ class EstimateRepository {
                 $position++;
 
                 //skip invalid items
-                if (request('js_item_description')[$key] == '' || request('js_item_unit')[$key] == '') {
+                if (request('js_item_description')[$key] == '') {
                     Log::error("invalid estimate line item...skipping it", ['process' => '[estimateRepository]', config('app.debug_ref'), 'function' => __function__, 'file' => basename(__FILE__), 'line' => __line__, 'path' => __file__]);
                     continue;
                 }
 
                 //skip invalid items
-                if (!is_numeric(request('js_item_rate')[$key]) || !is_numeric(request('js_item_total')[$key])) {
+                if (!is_numeric(request('js_item_rate')[$key]) || !is_numeric(request('js_item_total')[$key]) || !is_numeric(request('js_item_unit_height')[$key]) || !is_numeric(request('js_item_unit_width')[$key])) {
                     Log::error("invalid estimate line item...skipping it", ['process' => '[estimateRepository]', config('app.debug_ref'), 'function' => __function__, 'file' => basename(__FILE__), 'line' => __line__, 'path' => __file__]);
                     continue;
                 }
