@@ -510,7 +510,7 @@ class InvoiceRepository {
                 $position++;
 
                 //skip invalid items
-                if (request('js_item_description')[$key] == '' || request('js_item_unit')[$key] == '') {
+                if (request('js_item_description')[$key] == '') {
                     Log::error("invalid invoice line item...skipping it", ['process' => '[InvoiceRepository]', config('app.debug_ref'), 'function' => __function__, 'file' => basename(__FILE__), 'line' => __line__, 'path' => __file__]);
                     continue;
                 }
@@ -525,7 +525,7 @@ class InvoiceRepository {
                 if (request('js_item_type')[$key] == 'plain') {
 
                     //validate
-                    if (!is_numeric(request('js_item_quantity')[$key])) {
+                    if (!is_numeric(request('js_item_quantity')[$key]) || !is_numeric(request('js_item_unit_height')[$key]) || !is_numeric(request('js_item_unit_width')[$key])) {
                         Log::error("invalid invoice line item (plain) ...skipping it", ['process' => '[InvoiceRepository]', config('app.debug_ref'), 'function' => __function__, 'file' => basename(__FILE__), 'line' => __line__, 'path' => __file__]);
                         continue;
                     }
@@ -534,7 +534,7 @@ class InvoiceRepository {
                         'lineitem_description' => request('js_item_description')[$key],
                         'lineitem_quantity' => request('js_item_quantity')[$key],
                         'lineitem_rate' => request('js_item_rate')[$key],
-                        'lineitem_unit' => request('js_item_unit')[$key],
+                        'lineitem_unit' => request('js_item_unit_height')[$key] . "x" . request('js_item_unit_width')[$key],
                         'lineitem_total' => request('js_item_total')[$key],
                         'lineitemresource_linked_type' => request('js_item_linked_type')[$key],
                         'lineitemresource_linked_id' => request('js_item_linked_id')[$key],
