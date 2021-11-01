@@ -3191,11 +3191,11 @@ tbody.collapse.show {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #495057;
+  color: red;
   text-align: center;
   background-color: #e9ecef;
   border: 1px solid #ced4da;
-  border-radius: 0.25rem;
+  /* border-radius: 0.25rem; */
 }
 
 .input-group-addon.form-control-sm,
