@@ -11313,10 +11313,10 @@ div.boards::-webkit-scrollbar {
         min-width: 350px; }
       .invoice .invoice-wrapper .invoice-table-wrapper .invoice-table th.x-quantity,
       .estimate .invoice-wrapper .invoice-table-wrapper .invoice-table th.x-quantity {
-        width: 130px; }
+        width: 110px; }
       .invoice .invoice-wrapper .invoice-table-wrapper .invoice-table th.x-unit,
       .estimate .invoice-wrapper .invoice-table-wrapper .invoice-table th.x-unit {
-        width: 130px; }
+        width: 150px; }
       .invoice .invoice-wrapper .invoice-table-wrapper .invoice-table th.x-tax,
       .estimate .invoice-wrapper .invoice-table-wrapper .invoice-table th.x-tax {
         width: auto;
