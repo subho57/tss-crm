@@ -34,7 +34,7 @@
             name="js_item_unit[{{ $lineitem->lineitem_id ?? '' }}]" value="{{ $lineitem->lineitem_unit ?? '' }}"> --}}
     </td>
     <!--rate-->
-    <td class="form-group x-price bill_col_price">
+    <td class="form-group x-price bill_col_quantity">
         <input
             class="form-control form-control-sm js_item_rate calculation-element decimal-field js_line_validation_item"
             type="number" step="1" name="js_item_rate[{{ $lineitem->lineitem_id ?? '' }}]"
