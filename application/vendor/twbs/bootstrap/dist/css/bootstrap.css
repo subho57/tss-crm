@@ -3186,7 +3186,7 @@ tbody.collapse.show {
 }
 
 .input-group-addon {
-  padding: 0.375rem 0.75rem;
+  /* padding: 0.375rem 0.75rem; */
   margin-bottom: 0;
   font-size: 1rem;
   font-weight: 400;
@@ -3195,7 +3195,7 @@ tbody.collapse.show {
   text-align: center;
   background-color: #e9ecef;
   border: 1px solid #ced4da;
-  border-radius: 0.25rem;
+  /* border-radius: 0.25rem; */
 }
 
 .input-group-addon.form-control-sm,
