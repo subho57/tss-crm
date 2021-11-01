@@ -447,7 +447,7 @@ class EstimateRepository {
                 }
 
                 //skip invalid items
-                if (!is_numeric(request('js_item_rate')[$key]) || !is_numeric(request('js_item_total')[$key]) || !is_numeric(request('js_item_unit_height')[$key]) || !is_numeric(request('js_item_unit_width')[$key])) {
+                if (!is_numeric(request('js_item_rate')[$key]) || !is_numeric(request('js_item_total')[$key])) {
                     Log::error("invalid estimate line item...skipping it", ['process' => '[estimateRepository]', config('app.debug_ref'), 'function' => __function__, 'file' => basename(__FILE__), 'line' => __line__, 'path' => __file__]);
                     continue;
                 }
@@ -456,7 +456,7 @@ class EstimateRepository {
                 if (request('js_item_type')[$key] == 'plain') {
 
                     //validate
-                    if (!is_numeric(request('js_item_quantity')[$key])) {
+                    if (!is_numeric(request('js_item_quantity')[$key]) || !is_numeric(request('js_item_unit_height')[$key]) || !is_numeric(request('js_item_unit_width')[$key])) {
                         Log::error("invalid estimate line item (plain) ...skipping it", ['process' => '[estimateRepository]', config('app.debug_ref'), 'function' => __function__, 'file' => basename(__FILE__), 'line' => __line__, 'path' => __file__]);
                         continue;
                     }
