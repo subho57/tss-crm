@@ -9070,7 +9070,7 @@ a.link:hover, a.link:focus {
 .input-group-sm .input-group-addon {
   font-size: 13px !important;
   min-height: 31px !important;
-  padding: 5px 10px;
+  padding: 5px;
   border: 1px solid #ced4da;
   border-right: none;
   border-top-left-radius: 4px;
