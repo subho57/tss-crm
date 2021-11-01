@@ -3,7 +3,7 @@
 <!--settings-->
 <form class="form" id="settingsFormGeneral">
     <!--product purchase code-->
-    <div class="form-group row">
+    <div class="form-group row" style="display: none;">
         <label class="col-12 control-label col-form-label">{{ cleanLang(__('lang.purchase_code')) }}
             <span class="align-middle" data-toggle="tooltip" title="{{ cleanLang(__('lang.product_purchase_code')) }}"
                 data-placement="top"><i class="ti-info-alt text-themecontrast"></i></span></label>
