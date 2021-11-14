@@ -260,6 +260,7 @@ NXINVOICE.DOM.itemNewLine = function (data = {}) {
 
     //change field names to name='foo[xxx]' array with unique id
     lineitem.find(".js_item_description").attr("name", "js_item_description[" + uniqueid + "]");
+    lineitem.find(".js_item_category").attr("name", "js_item_category[" + uniqueid + "]");
     lineitem.find(".js_item_quantity").attr("name", "js_item_quantity[" + uniqueid + "]");
     lineitem.find(".js_item_unit").attr("name", "js_item_unit[" + uniqueid + "]");
     lineitem.find(".js_item_unit_height").attr("name", "js_item_unit_height[" + uniqueid + "]");
