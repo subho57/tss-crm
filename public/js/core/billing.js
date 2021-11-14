@@ -218,6 +218,7 @@ NXINVOICE.DOM.itemNewLine = function (data = {}) {
     var item_unit_width = (data.item_unit_width != null) ? data.item_unit_width : '';
     var item_quantity = (data.item_quantity != null) ? data.item_quantity : '';
     var item_description = (data.item_description != null) ? data.item_description : '';
+    var item_category = (data.item_category != null) ? data.item_category : '';
     var item_rate = (data.item_rate != null) ? data.item_rate : '';
     var item_total = (data.item_total != null) ? data.item_total : '';
     var item_linked_type = (data.item_linked_type != null) ? data.item_linked_type : '';
@@ -240,6 +241,7 @@ NXINVOICE.DOM.itemNewLine = function (data = {}) {
 
     //prefill if any data has been sent
     lineitem.find(".js_item_description").html(item_description);
+    lineitem.find(".js_item_category").html(item_category);
     lineitem.find(".js_item_quantity").val(item_quantity);
     lineitem.find(".js_item_unit").val(item_unit);
     lineitem.find(".js_item_unit_height").val(item_unit_height);
@@ -540,6 +542,7 @@ NXINVOICE.DOM.addSelectedProductItems = function (self) {
                 'item_unit': $(this).attr('data-unit'),
                 'item_rate': $(this).attr('data-rate'),
                 'item_total': $(this).attr('data-rate'),
+                'item_category': $(this).attr('data-category'),
             }
 
             //create new line item
