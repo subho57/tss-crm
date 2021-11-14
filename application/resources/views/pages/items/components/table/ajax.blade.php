@@ -9,7 +9,7 @@
                 class="listcheckbox listcheckbox-items filled-in chk-col-light-blue items-checkbox"
                 data-actions-container-class="items-checkbox-actions-container" data-item-id="{{ $item->item_id }}"
                 data-unit="{{ $item->item_unit }}" data-quantity="1" data-description="{{ $item->item_description }}"
-                data-rate="{{ $item->item_rate }}">
+                data-rate="{{ $item->item_rate }}" data-category="{{ $item->category_name }}">
             <label for="listcheckbox-items-{{ $item->item_id }}"></label>
         </span>
     </td>
