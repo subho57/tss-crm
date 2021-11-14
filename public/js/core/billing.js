@@ -251,6 +251,7 @@ NXINVOICE.DOM.itemNewLine = function (data = {}) {
     lineitem.find(".js_item_linked_type").val(item_linked_type);
     lineitem.find(".js_item_linked_id").val(item_linked_id);
     lineitem.find(".js_linetax_rate").val('');
+    console.log("prod_cat",item_category);
     if(item_category == 'Static') {
         lineitem.find(".js_item_unit").style.display = "none";
         lineitem.find(".js_item_unit_height").style.display = "none";
