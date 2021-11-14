@@ -241,7 +241,7 @@ NXINVOICE.DOM.itemNewLine = function (data = {}) {
 
     //prefill if any data has been sent
     lineitem.find(".js_item_description").html(item_description);
-    lineitem.find(".js_item_category").html(item_category);
+    // lineitem.find(".js_item_category").val(item_category);
     lineitem.find(".js_item_quantity").val(item_quantity);
     lineitem.find(".js_item_unit").val(item_unit);
     lineitem.find(".js_item_unit_height").val(item_unit_height);
@@ -251,6 +251,11 @@ NXINVOICE.DOM.itemNewLine = function (data = {}) {
     lineitem.find(".js_item_linked_type").val(item_linked_type);
     lineitem.find(".js_item_linked_id").val(item_linked_id);
     lineitem.find(".js_linetax_rate").val('');
+    if(item_category == 'Static') {
+        lineitem.find(".js_item_unit").style.display = "none";
+        lineitem.find(".js_item_unit_height").style.display = "none";
+        lineitem.find(".js_item_unit_width").style.display = "none";
+    }
 
     //add unique id to the ide
     var uniqueid = NX.uniqueID();
@@ -260,7 +265,7 @@ NXINVOICE.DOM.itemNewLine = function (data = {}) {
 
     //change field names to name='foo[xxx]' array with unique id
     lineitem.find(".js_item_description").attr("name", "js_item_description[" + uniqueid + "]");
-    lineitem.find(".js_item_category").attr("name", "js_item_category[" + uniqueid + "]");
+    // lineitem.find(".js_item_category").attr("name", "js_item_category[" + uniqueid + "]");
     lineitem.find(".js_item_quantity").attr("name", "js_item_quantity[" + uniqueid + "]");
     lineitem.find(".js_item_unit").attr("name", "js_item_unit[" + uniqueid + "]");
     lineitem.find(".js_item_unit_height").attr("name", "js_item_unit_height[" + uniqueid + "]");
