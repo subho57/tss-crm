@@ -260,7 +260,7 @@ NXINVOICE.DOM.itemNewLine = function (data = {}) {
         // // lineitem.find(".item_unit_height").css({"display":"none"});
 
         // lineitem.find(".bill_col_unit").css({"display":"none"});
-        // $(".bill_col_unit").hide();
+        $(".bill_col_unit").hide();
         // $(".item_unit_height").hide();
         // $(".item_unit_width").hide();
          $(".bill_col_unit").css({"display":"none"});
@@ -304,9 +304,9 @@ NXINVOICE.DOM.itemNewLine = function (data = {}) {
     self.blur();
 };
 
-
+$(".bill_col_unit").css({"display":"none"});
 $("#unit_toggle_output").css({"display":"none"});
-
+$(".bill_col_unit").hide();
 
 /*----------------------------------------------------------------
  * [LINE ITEM]
