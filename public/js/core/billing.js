@@ -453,8 +453,7 @@ NXINVOICE.CALC.recalculateLines = function () {
          * --------------------------------------------------*/
         if (type == 'plain') {
             //if row is valid, workout total
-            if (quantity > 0 && rate > 0) {
-                if(unit_width > 0 && unit_height > 0) {
+            if (quantity > 0 && rate > 0 && unit_width > 0 && unit_height > 0) {
                 //line total and tax
                 var sqmm = unit_width * unit_height / 1000000;
                 var linetotal = quantity * rate * sqmm;
@@ -466,19 +465,6 @@ NXINVOICE.CALC.recalculateLines = function () {
                 //increase bill total
                 NXINVOICE.DATA.calc_total += linetotal;
                 NXINVOICE.log("[billing] reclaculateBill() - line item is valid. [line item total]: " + linetotal);
-                }else
-                {
-                    // var sqmm = unit_width * unit_height / 1000000;
-                    var linetotal = quantity * rate ;
-                    total.val(nxFormatDecimal(linetotal));
-                    //work out tax
-                    var linetax = linetotal * line_tax / 100;
-                    //save line tax (sum) for later calculations
-                    tax.val(linetax);
-                    //increase bill total
-                    NXINVOICE.DATA.calc_total += linetotal;
-                    NXINVOICE.log("[billing] reclaculateBill() - line item is valid. [line item total]: " + linetotal);
-                }
             } else {
                 NXINVOICE.log("[billing] reclaculateBill() - line item is invalid and is skipped");
                 total.val('');
