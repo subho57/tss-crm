@@ -32,7 +32,7 @@
             <input type="number" class="form-control js_item_unit_height calculation-element js_line_validation_item mb-1 pb-5" name="js_item_unit_height[{{ $lineitem->lineitem_id ?? '' }}]" value="{{ $lineitem->lineitem_unit_height ?? '' }}">
         </div>
         <!--width-->
-        <div class="input-group input-group-sm item_unit_width">
+        <div class="input-group input-group-sm item_unit_width d-none">
             <span class="input-group-addon item_unit_width pb-5" id="fx-line-item-min">{{ cleanLang(__('lang.units_width')) }}<small><br>(in mm)</small><br/></span>
             <input type="number" class="form-control js_item_unit_width calculation-element js_line_validation_item pb-5" name="js_item_unit_width[{{ $lineitem->lineitem_id ?? '' }}]" value="{{ $lineitem->lineitem_unit_width ?? '' }}">
         </div>
