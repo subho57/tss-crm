@@ -257,8 +257,11 @@ NXINVOICE.DOM.itemNewLine = function (data = {}) {
         lineitem.find(".js_item_unit_height").css({"display":"none"});
         lineitem.find(".js_item_unit_width").css({"display":"none"});
         // lineitem.find(".item_unit_height").css({"display":"none"});
-        
+
         lineitem.find(".bill_col_unit").css({"display":"none"});
+        $(".bill_col_unit").hide();
+        $(".item_unit_height").hide();
+        $(".item_unit_width").hide(); 
         // lineitem.find(".item_unit_width").css({"display":"none"});
     }
 
