@@ -305,7 +305,7 @@ NXINVOICE.DOM.itemNewLine = function (data = {}) {
 };
 
 
-
+$("#unit_toggle_output").css({"display":"none"});
 
 
 /*----------------------------------------------------------------
