@@ -258,18 +258,6 @@ NXINVOICE.DOM.itemNewLine = function (data = {}) {
         lineitem.find(".js_item_unit").css({"display":"none"});
         lineitem.find(".js_item_unit_height").css({"display":"none"});
         lineitem.find(".js_item_unit_width").css({"display":"none"});
-        // // lineitem.find(".item_unit_height").css({"display":"none"});
-
-        // lineitem.find(".bill_col_unit").css({"display":"none"});
-        // $(".bill_col_unit").hide();
-    //     // $(".item_unit_height").hide();
-    //     // $(".item_unit_width").hide();
-    //      $(".bill_col_unit").css({"display":"none"});
-    //     // $(".item_unit_height").css({"display":"none"}); 
-    //    //
-    //     $("#unit_toggle_output").hide();
-    //     $("#unit_toggle_output").css({"display":"none"});
-        // lineitem.find(".item_unit_width").css({"display":"none"});
     }
 
     //add unique id to the ide
@@ -465,7 +453,8 @@ NXINVOICE.CALC.recalculateLines = function () {
          * --------------------------------------------------*/
         if (type == 'plain') {
             //if row is valid, workout total
-            if (quantity > 0 && rate > 0 && unit_width > 0 && unit_height > 0) {
+            if (quantity > 0 && rate > 0) {
+                if(unit_width > 0 && unit_height > 0) {
                 //line total and tax
                 var sqmm = unit_width * unit_height / 1000000;
                 var linetotal = quantity * rate * sqmm;
@@ -477,6 +466,19 @@ NXINVOICE.CALC.recalculateLines = function () {
                 //increase bill total
                 NXINVOICE.DATA.calc_total += linetotal;
                 NXINVOICE.log("[billing] reclaculateBill() - line item is valid. [line item total]: " + linetotal);
+                }else
+                {
+                    // var sqmm = unit_width * unit_height / 1000000;
+                    var linetotal = quantity * rate ;
+                    total.val(nxFormatDecimal(linetotal));
+                    //work out tax
+                    var linetax = linetotal * line_tax / 100;
+                    //save line tax (sum) for later calculations
+                    tax.val(linetax);
+                    //increase bill total
+                    NXINVOICE.DATA.calc_total += linetotal;
+                    NXINVOICE.log("[billing] reclaculateBill() - line item is valid. [line item total]: " + linetotal);
+                }
             } else {
                 NXINVOICE.log("[billing] reclaculateBill() - line item is invalid and is skipped");
                 total.val('');
