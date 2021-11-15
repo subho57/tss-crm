@@ -263,11 +263,11 @@ NXINVOICE.DOM.itemNewLine = function (data = {}) {
         // $(".bill_col_unit").hide();
         // $(".item_unit_height").hide();
         // $(".item_unit_width").hide();
-        // $(".bill_col_unit").css({"display":"none"});
+         $(".bill_col_unit").css({"display":"none"});
         // $(".item_unit_height").css({"display":"none"}); 
        //
-        // $("#unit_toggle_output").hide();
-        // $("#unit_toggle_output").css({"display":"none"});
+        $("#unit_toggle_output").hide();
+        $("#unit_toggle_output").css({"display":"none"});
         // lineitem.find(".item_unit_width").css({"display":"none"});
     }
 
