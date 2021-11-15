@@ -253,9 +253,9 @@ NXINVOICE.DOM.itemNewLine = function (data = {}) {
     lineitem.find(".js_linetax_rate").val('');
     console.log("prod_cat",item_category);
     if(item_category == 'Static') {
-        lineitem.find(".js_item_unit").style.display = "none";
-        lineitem.find(".js_item_unit_height").style.display = "none";
-        lineitem.find(".js_item_unit_width").style.display = "none";
+        lineitem.find(".js_item_unit").css({"display":"none"});
+        lineitem.find(".js_item_unit_height").css({"display":"none"});
+        lineitem.find(".js_item_unit_width").css({"display":"none"});
     }
 
     //add unique id to the ide
