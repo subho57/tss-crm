@@ -256,6 +256,8 @@ NXINVOICE.DOM.itemNewLine = function (data = {}) {
         lineitem.find(".js_item_unit").css({"display":"none"});
         lineitem.find(".js_item_unit_height").css({"display":"none"});
         lineitem.find(".js_item_unit_width").css({"display":"none"});
+        lineitem.find(".item_unit_height").css({"display":"none"});
+        lineitem.find(".item_unit_width").css({"display":"none"});
     }
 
     //add unique id to the ide
