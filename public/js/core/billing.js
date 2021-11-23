@@ -459,6 +459,7 @@ NXINVOICE.CALC.recalculateLines = function () {
             if (quantity > 0 && rate > 0 && $(".js_item_unit_height").is(":hidden") && $(".js_item_unit_width").is(":hidden")) {
                 let linetotal = quantity * rate;
                 total.val(nxFormatDecimal(linetotal));
+                NXINVOICE.log("Height and Width Hidden check inside");
                 //work out tax
                 let linetax = linetotal * line_tax / 100;
                 //save line tax (sum) for later calculations
