@@ -454,28 +454,29 @@ NXINVOICE.CALC.recalculateLines = function () {
          * PLAIN LINE ITEMS
          * --------------------------------------------------*/
         if (type == 'plain') {
+            NXINVOICE.log("Height and Width Hidden check");
+            NXINVOICE.log($(".js_item_unit_height").is(":hidden"));
+            NXINVOICE.log($(".js_item_unit_width").is(":hidden"));
             //if row is valid, workout total
-            if (quantity > 0 && rate > 0 && unit=='0x0') {
-                var linetotal = quantity * rate;
+            if (quantity > 0 && rate > 0 && unit=='0x0' ) {
+                let linetotal = quantity * rate;
                 total.val(nxFormatDecimal(linetotal));
                 //work out tax
-                var linetax = linetotal * line_tax / 100;
+                let linetax = linetotal * line_tax / 100;
                 //save line tax (sum) for later calculations
                 tax.val(linetax);
                 //increase bill total
                 NXINVOICE.DATA.calc_total += linetotal;
-                NXINVOICE.log("Height and Width Hidden check");
-                NXINVOICE.log($(".js_item_unit_height").is(":hidden"));
-                NXINVOICE.log($(".js_item_unit_width").is(":hidden"));
+                
                 NXINVOICE.log("[billing] reclaculateBill() - line item is valid. [line item total]: " + linetotal);
             }
             else if (quantity > 0 && rate > 0 && unit_width > 0 && unit_height > 0) {
                 //line total and tax
-                var sqmm = unit_width * unit_height / 1000000;
-                var linetotal = quantity * rate * sqmm;
+                let sqmm = unit_width * unit_height / 1000000;
+                let linetotal = quantity * rate * sqmm;
                 total.val(nxFormatDecimal(linetotal));
                 //work out tax
-                var linetax = linetotal * line_tax / 100;
+                let linetax = linetotal * line_tax / 100;
                 //save line tax (sum) for later calculations
                 tax.val(linetax);
                 //increase bill total
