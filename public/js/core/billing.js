@@ -458,6 +458,7 @@ NXINVOICE.CALC.recalculateLines = function () {
             //if row is valid, workout total
             if (quantity > 0 && rate > 0 && $(".js_item_unit_height").is(":hidden") && $(".js_item_unit_width").is(":hidden")) {
                 let linetotal = quantity * rate;
+                console.log("checks for h and w");
                 total.val(nxFormatDecimal(linetotal));
                 NXINVOICE.log("Height and Width Hidden check inside");
                 //work out tax
