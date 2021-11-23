@@ -213,9 +213,9 @@ NXINVOICE.DOM.itemNewLine = function (data = {}) {
     NXINVOICE.log(data);
 
     //get data is any was provided
-    var item_unit = (data.item_unit != null) ? data.item_unit : '';
-    var item_unit_height = (data.item_unit_height != null) ? data.item_unit_height : '';
-    var item_unit_width = (data.item_unit_width != null) ? data.item_unit_width : '';
+    var item_unit = (data.item_unit != null) ? data.item_unit : '0x0';
+    var item_unit_height = item_unit.split('x')[0];
+    var item_unit_width = item_unit.split('x')[1];
     var item_quantity = (data.item_quantity != null) ? data.item_quantity : '';
     var item_description = (data.item_description != null) ? data.item_description : '';
     var item_category = (data.item_category != null) ? data.item_category : '';
@@ -516,7 +516,7 @@ NXINVOICE.CALC.recalculateLines = function () {
  *--------------------------------------------------------------*/
 NXINVOICE.DOM.deleteLine = function (self) {
 
-    NXINVOICE.log("[billing] NXINVOICE.DOM.deleteLine() - deleteing line item");
+    NXINVOICE.log("[billing] NXINVOICE.DOM.deleteLine() - deleting line item");
 
     //find parent
     var lineitem = self.closest('tr');
