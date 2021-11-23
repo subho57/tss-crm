@@ -22,7 +22,7 @@
     <td class="form-group x-quantity bill_col_quantity">
         <input class="form-control form-control-sm js_item_quantity calculation-element js_line_validation_item"
             type="number" step="1" name="js_item_quantity[{{ $lineitem->lineitem_id ?? '' }}]"
-            value="{{ $lineitem->lineitem_unit ?? '' }}">
+            value="{{ $lineitem->lineitem_unit  }}">
     </td>
     <!--unit-->
     <!--  $lineitem->lineitem_unit -->
