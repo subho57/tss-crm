@@ -464,6 +464,7 @@ NXINVOICE.CALC.recalculateLines = function () {
                 tax.val(linetax);
                 //increase bill total
                 NXINVOICE.DATA.calc_total += linetotal;
+                NXINVOICE.log("Height and Width Hidden check");
                 NXINVOICE.log($(".js_item_unit_height").is(":hidden"));
                 NXINVOICE.log($(".js_item_unit_width").is(":hidden"));
                 NXINVOICE.log("[billing] reclaculateBill() - line item is valid. [line item total]: " + linetotal);
