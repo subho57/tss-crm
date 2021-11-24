@@ -391,7 +391,7 @@ NXINVOICE.CALC.recalculateLines = function () {
         //each input fields
         var description = lineitem.find(".js_item_description");
         var quantity = lineitem.find(".js_item_quantity").val();
-        var unit = lineitem.find(".js_item_unit").val();
+        var unit = lineitem.find(".js_item_unit_height");
         var unit_height = lineitem.find(".js_item_unit_height").val();
         var unit_width = lineitem.find(".js_item_unit_width").val();
         var rate = lineitem.find(".js_item_rate").val();
@@ -458,7 +458,7 @@ NXINVOICE.CALC.recalculateLines = function () {
             //if row is valid, workout total
             if(quantity > 0 && rate > 0) {
                 var linetotal = 0;
-                if ( $(".js_item_unit_height").css('display') == 'none' || $(".js_item_unit_height").css("visibility") == "hidden") {
+                if ( unit.css('display') == 'none' || unit.css("visibility") == "hidden") {
                     linetotal = quantity * rate;
                 } else if (unit_width > 0 && unit_height > 0) {
                     var sqmm = unit_width * unit_height / 1000000;
