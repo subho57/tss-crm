@@ -456,7 +456,7 @@ NXINVOICE.CALC.recalculateLines = function () {
         if (type == 'plain') {
             NXINVOICE.log("Height and Width Hidden check");
             //if row is valid, workout total
-            if (quantity > 0 && rate > 0 && unit_width > 0 && unit_height > 0) {
+            if (quantity > 0 && rate > 0 && unit_width > 0 && unit_height > 0  && $(".js_item_unit_height").is(":visible") && $(".js_item_unit_width").is(":visible")) {
                 //line total and tax
                 var sqmm = unit_width * unit_height / 1000000;
                 var linetotal = quantity * rate * sqmm;
