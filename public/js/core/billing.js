@@ -225,6 +225,9 @@ NXINVOICE.DOM.itemNewLine = function (data = {}) {
     var item_total = (data.item_total != null) ? data.item_total : '';
     var item_linked_type = (data.item_linked_type != null) ? data.item_linked_type : '';
     var item_linked_id = (data.item_linked_id != null) ? data.item_linked_id : '';
+    if (item_unit_height == 0 && item_unit_width == 0 && item_total != 0) {
+        item_category = 'Static';
+    }
 
     //check for deuplicate licked items (expense or task etc)
     if (item_linked_type != '') {
@@ -254,7 +257,7 @@ NXINVOICE.DOM.itemNewLine = function (data = {}) {
     lineitem.find(".js_item_linked_id").val(item_linked_id);
     lineitem.find(".js_linetax_rate").val('');
     console.log("prod_cat",item_category);
-    if(item_category == 'Static' || item_unit == '') {
+    if(item_category == 'Static') {
         console.log('here');
         lineitem.find('div').css({"display":"none"});
         lineitem.find(".js_item_unit").css({"display":"none"});
