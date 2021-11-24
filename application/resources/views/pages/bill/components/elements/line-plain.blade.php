@@ -28,13 +28,13 @@
     <!--  $lineitem->lineitem_unit -->
     <td class="form-group x-unit bill_col_unit" id="unit_toggle_output">
         <!--height-->
-        <div class="input-group input-group-sm item_unit_height {{ (explode('x', $lineitem->lineitem_unit ?? '0x0')[0]) =='0'? 'd-none' : '' }}">
+        <div class="input-group input-group-sm item_unit_height {{ (isset($lineitem->lineitem_unit) && isset($lineitem->lineitem_total) && $lineitem->lineitem_unit == '0x0' && $lineitem->lineitem_total > 0) ? 'd-none' : '' }}">
             <span class="input-group-addon item_unit_height mb-1 pb-5" id="fx-line-item-hrs" >{{ cleanLang(__('lang.units_height')) }}<small><br>(in mm)</small><br/></span>
             <input type="number" class="form-control js_item_unit_height calculation-element js_line_validation_item mb-1 pb-5" name="js_item_unit_height[{{ $lineitem->lineitem_id ?? '' }}]"
              value="{{  explode('x', $lineitem->lineitem_unit ?? '0x0')[0] }}">
         </div>
         <!--width-->
-        <div class="input-group input-group-sm item_unit_width">
+        <div class="input-group input-group-sm item_unit_width  {{ (isset($lineitem->lineitem_unit) && isset($lineitem->lineitem_total) && $lineitem->lineitem_unit == '0x0' && $lineitem->lineitem_total > 0) ? 'd-none' : '' }}">
             <span class="input-group-addon item_unit_width pb-5" id="fx-line-item-min">{{ cleanLang(__('lang.units_width')) }}<small><br>(in mm)</small><br/></span>
             <input type="number" class="form-control js_item_unit_width calculation-element js_line_validation_item pb-5" name="js_item_unit_width[{{ $lineitem->lineitem_id ?? '' }}]" 
             value="{{ explode('x', $lineitem->lineitem_unit ?? '0x0')[1] }}">
