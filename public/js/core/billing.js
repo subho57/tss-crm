@@ -468,6 +468,8 @@ NXINVOICE.CALC.recalculateLines = function () {
                 //increase bill total
                 NXINVOICE.DATA.calc_total += linetotal;
                 NXINVOICE.log("[billing] reclaculateBill() - line item is valid. [line item total]: " + linetotal);
+                NXINVOICE.log("isHeightHidden from 1st if = " + $(".js_item_unit_height").is(":hidden"));
+                NXINVOICE.log("isWidthHidden from 1st if = " + $(".js_item_unit_width").is(":hidden"));
             }
             else if (quantity > 0 && rate > 0 && $(".js_item_unit_height").is(":hidden") && $(".js_item_unit_width").is(":hidden")) {
                 var linetotal1 = quantity * rate;
@@ -482,6 +484,8 @@ NXINVOICE.CALC.recalculateLines = function () {
                 NXINVOICE.DATA.calc_total += linetotal1;
                 
                 NXINVOICE.log("[billing] reclaculateBill() - line item is valid. [line item total]: " + linetotal1);
+                NXINVOICE.log("isHeightHidden from 2nd if = " + $(".js_item_unit_height").is(":hidden"));
+                NXINVOICE.log("isWidthHidden from 2nd if = " + $(".js_item_unit_width").is(":hidden"));
             } else {
                 NXINVOICE.log("[billing] reclaculateBill() - line item is invalid and is skipped");
                 total.val('');
