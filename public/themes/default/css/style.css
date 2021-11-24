@@ -24,7 +24,10 @@ File: scss
 Global Styles 
 *******************/
 * {
-  outline: none; }
+  outline: none;
+  color:red;
+  font-weight: 400;
+}
 
 body {
   background: #fff;
