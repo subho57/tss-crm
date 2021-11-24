@@ -471,7 +471,7 @@ NXINVOICE.CALC.recalculateLines = function () {
                 NXINVOICE.log("isHeightHidden from 1st if = " + $(".js_item_unit_height").is(":hidden"));
                 NXINVOICE.log("isWidthHidden from 1st if = " + $(".js_item_unit_width").is(":hidden"));
             }
-            else if (quantity > 0 && rate > 0 && $(".js_item_unit_height").is(":hidden") && $(".js_item_unit_width").is(":hidden")) {
+            else if (quantity > 0 && rate > 0 && unit_width == 0 && unit_height == 0 && $(".js_item_unit_height").is(":hidden") && $(".js_item_unit_width").is(":hidden")) {
                 var linetotal1 = quantity * rate;
                 console.log("checks for h and w");
                 total.val(nxFormatDecimal(linetotal1));
