@@ -225,7 +225,7 @@ NXINVOICE.DOM.itemNewLine = function (data = {}) {
     var item_total = (data.item_total != null) ? data.item_total : '';
     var item_linked_type = (data.item_linked_type != null) ? data.item_linked_type : '';
     var item_linked_id = (data.item_linked_id != null) ? data.item_linked_id : '';
-    if (item_unit_height == 0 && item_unit_width == 0 && item_total != 0) {
+    if (item_unit == '0x0' && item_total > 0) {
         item_category = 'Static';
     }
 
