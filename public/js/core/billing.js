@@ -456,10 +456,14 @@ NXINVOICE.CALC.recalculateLines = function () {
         if (type == 'plain') {
             NXINVOICE.log("Height and Width Hidden check");
             //if row is valid, workout total
-            if (quantity > 0 && rate > 0 && unit_width > 0 && unit_height > 0  && $(".js_item_unit_height").is(":visible") && $(".js_item_unit_width").is(":visible")) {
-                //line total and tax
-                var sqmm = unit_width * unit_height / 1000000;
-                var linetotal = quantity * rate * sqmm;
+            if(quantity > 0 && rate > 0) {
+                var linetotal = 0;
+                if ( $(".js_item_unit_height").css('display') == 'none' || $(".js_item_unit_height").css("visibility") == "hidden") {
+                    linetotal = quantity * rate;
+                } else if (unit_width > 0 && unit_height > 0) {
+                    var sqmm = unit_width * unit_height / 1000000;
+                    linetotal = quantity * rate * sqmm;
+                }
                 total.val(nxFormatDecimal(linetotal));
                 //work out tax
                 var linetax = linetotal * line_tax / 100;
@@ -468,24 +472,6 @@ NXINVOICE.CALC.recalculateLines = function () {
                 //increase bill total
                 NXINVOICE.DATA.calc_total += linetotal;
                 NXINVOICE.log("[billing] reclaculateBill() - line item is valid. [line item total]: " + linetotal);
-                NXINVOICE.log("isHeightHidden from 1st if = " + $(".js_item_unit_height").is(":hidden"));
-                NXINVOICE.log("isWidthHidden from 1st if = " + $(".js_item_unit_width").is(":hidden"));
-            }
-            else if (quantity > 0 && rate > 0 && unit_width == 0 && unit_height == 0 && $(".js_item_unit_height").is(":hidden") && $(".js_item_unit_width").is(":hidden")) {
-                var linetotal1 = quantity * rate;
-                console.log("checks for h and w");
-                total.val(nxFormatDecimal(linetotal1));
-                NXINVOICE.log("Height and Width Hidden check inside");
-                //work out tax
-                var linetax1 = linetotal1 * line_tax / 100;
-                //save line tax (sum) for later calculations
-                tax.val(linetax1);
-                //increase bill total
-                NXINVOICE.DATA.calc_total += linetotal1;
-                
-                NXINVOICE.log("[billing] reclaculateBill() - line item is valid. [line item total]: " + linetotal1);
-                NXINVOICE.log("isHeightHidden from 2nd if = " + $(".js_item_unit_height").is(":hidden"));
-                NXINVOICE.log("isWidthHidden from 2nd if = " + $(".js_item_unit_width").is(":hidden"));
             } else {
                 NXINVOICE.log("[billing] reclaculateBill() - line item is invalid and is skipped");
                 total.val('');
