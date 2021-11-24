@@ -9,7 +9,7 @@
     </td>
     <!--description-->
     <td class="form-group x-description bill_col_description">
-        <textarea class="form-control form-control-sm js_item_description js_line_validation_item" rows="3"
+        <textarea class="form-control form-control-sm js_item_description js_line_validation_item" rows="6"
             name="js_item_description[{{ $lineitem->lineitem_id ?? '' }}]">{{ $lineitem->lineitem_description ?? '' }}</textarea>
     </td>
     <!--category-->
