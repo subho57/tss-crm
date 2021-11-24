@@ -465,7 +465,7 @@ class EstimateRepository {
                         'lineitem_description' => request('js_item_description')[$key],
                         'lineitem_quantity' => request('js_item_quantity')[$key],
                         'lineitem_rate' => request('js_item_rate')[$key],
-                        'lineitem_unit' => request('js_item_unit_height')[$key] . "x" . request('js_item_unit_width')[$key],
+                        'lineitem_unit' => (request('js_item_quantity')[$key] > 0 && request('js_item_rate')[$key] > 0 && request('js_item_total')[$key] > 0 && request('js_item_unit_height')[$key] == 0 && request('js_item_unit_width')[$key] == 0) ? '' : request('js_item_unit_height')[$key] . "x" . request('js_item_unit_width')[$key],
                         'lineitem_total' => request('js_item_total')[$key],
                         'lineitemresource_linked_type' => request('js_item_linked_type')[$key],
                         'lineitemresource_linked_id' => request('js_item_linked_id')[$key],
