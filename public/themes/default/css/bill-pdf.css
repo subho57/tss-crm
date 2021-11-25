@@ -3538,6 +3538,8 @@ widget-chart-page product review
         width: 270px; }
       .pdf-page .bill-pdf .bill-table-pdf .invoice-table th.x-quantity {
         width: 110px; }
+      .pdf-page .bill-pdf .bill-table-pdf .invoice-table th.x-unit {
+        width: 150px; }
     .pdf-page .bill-pdf .bill-totals-table-pdf #bill-totals-wrapper {
       padding: 0px !important;
       margin-right: 0px; }

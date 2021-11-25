@@ -8,7 +8,7 @@
     </td>
     <!--description-->
     <td class="form-group x-description bill_col_description">
-        <textarea class="form-control form-control-sm js_item_description js_line_validation_item" rows="3"
+        <textarea class="form-control form-control-sm js_item_description js_line_validation_item" rows="6"
             name="js_item_description[{{ $lineitem->lineitem_id ?? '' }}]">{{ $lineitem->lineitem_description ?? '' }}</textarea>
     </td>
     <!--quantity-->
@@ -41,7 +41,7 @@
         class="bill_col_tax form-group x-tax {{ runtimeVisibility('invoice-column-inline-tax', $bill->bill_tax_type) }} ">
         <select name="js_linetax_rate[{{ $lineitem->lineitem_id ?? '' }}]"
             class="form-control form-control-sm select2-x js_linetax_rate">
-            <option value="10">VAT(10%)</option>
+            <option value="10">GST(10%)</option>
             <option value="15">Sales tax (15%)</option>
             <option value="20">Income Tax (20%)</option>
         </select>

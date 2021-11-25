@@ -16,7 +16,7 @@
     </td>
     @endif
     <!--unit price-->
-    <td class="x-unit">{{ (isset($lineitem->lineitem_unit) && $lineitem->lineitem_unit == '0x0')? ' ':$lineitem->lineitem_unit }}</td>
+    <td class="x-unit">{{ (isset($lineitem->lineitem_unit) && $lineitem->lineitem_unit == '0x0' && isset($lineitem->lineitem_total) && $lineitem->lineitem_total > 0) ? ' ' : $lineitem->lineitem_unit }}</td>
     <!--rate-->
     <td class="x-rate">{{ runtimeNumberFormat($lineitem->lineitem_rate) }}</td>
     <!--tax-->

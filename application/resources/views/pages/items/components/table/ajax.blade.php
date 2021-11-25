@@ -22,7 +22,7 @@
         @endif
     </td>
     <td class="items_col_rate" id="items_col_rate_{{ $item->item_id }}">
-        {{ runtimeMoneyFormat($item->item_rate) }} per m<sup>2</sup>
+        {{ runtimeMoneyFormat($item->item_rate) }} {{ (isset($item->category_name) && $item->category_name == 'Dynamic') ? 'per m<sup>2</sup>' : '' }}
     </td>
     {{-- <td class="items_col_unit" id="items_col_unit_{{ $item->item_id }}">{{ $item->item_unit }}</td> --}}
     @if(config('visibility.items_col_category'))
