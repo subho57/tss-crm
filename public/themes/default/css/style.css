@@ -11345,10 +11345,10 @@ div.boards::-webkit-scrollbar {
       min-width: 350px; }
     .invoice .invoice-wrapper .invoice-table-wrapper .invoice-table.editing th.x-quantity,
     .estimate .invoice-wrapper .invoice-table-wrapper .invoice-table.editing th.x-quantity {
-      width: 80px; }
+      width: 120px; }
     .invoice .invoice-wrapper .invoice-table-wrapper .invoice-table.editing th.x-unit,
     .estimate .invoice-wrapper .invoice-table-wrapper .invoice-table.editing th.x-unit {
-      width: 160px; }
+      width: 120px; }
     .invoice .invoice-wrapper .invoice-table-wrapper .invoice-table.editing th.x-tax,
     .estimate .invoice-wrapper .invoice-table-wrapper .invoice-table.editing th.x-tax {
       width: auto; }
