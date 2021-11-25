@@ -267,14 +267,14 @@
                                 class="settings-menu-link js-ajax-ux-request js-submenu-ajax js-dynamic-settings-url">{{ cleanLang(__('lang.estimates')) }}</a>
                         </li>
                         <li>
+                            <a href="javascript:void(0);" data-url="/settings/estimates"
+                                id="settings-menu-billing-estimate"
+                                class="settings-menu-link js-ajax-ux-request js-submenu-ajax js-dynamic-settings-url">{{ cleanLang(__('lang.estimates')) }}</a>
+                        </li>
+                        <li>
                             <a href="javascript:void(0);" data-url="/settings/subscriptions"
                                 id="settings-menu-billing-subscription"
                                 class="settings-menu-link js-ajax-ux-request js-submenu-ajax js-dynamic-settings-url">{{ cleanLang(__('lang.subscriptions')) }}</a>
-                        </li>
-                        <li>
-                            <a href="javascript:void(0);" data-url="/settings/expenses"
-                                id="settings-menu-billing-expense"
-                                class="settings-menu-link js-ajax-ux-request js-submenu-ajax js-dynamic-settings-url">{{ cleanLang(__('lang.expenses')) }}</a>
                         </li>
                         <li>
                             <a href="javascript:void(0);" data-url="/settings/expenses"
