@@ -276,6 +276,11 @@
                                 id="settings-menu-billing-expense"
                                 class="settings-menu-link js-ajax-ux-request js-submenu-ajax js-dynamic-settings-url">{{ cleanLang(__('lang.expenses')) }}</a>
                         </li>
+                        <li>
+                            <a href="javascript:void(0);" data-url="/settings/expenses"
+                                id="settings-menu-billing-expense"
+                                class="settings-menu-link js-ajax-ux-request js-submenu-ajax js-dynamic-settings-url">{{ cleanLang(__('lang.expenses')) }}</a>
+                        </li>
                         <li class="hidden">
                             <a href="javascript:void(0);" data-url="/settings/units" id="settings-menu-billing-unit"
                                 class="settings-menu-link js-ajax-ux-request js-submenu-ajax js-dynamic-settings-url">{{ cleanLang(__('lang.product_units')) }}</a>
