@@ -26,7 +26,7 @@
     </td>
     <!--unit-->
     <!--  $lineitem->lineitem_unit -->
-    <td class="form-group x-unit bill_col_unit">
+    <td class="form-group x-quantity bill_col_quantity">
         <!--height-->
         <div class="input-group input-group-sm m-b-4 {{ (isset($lineitem->lineitem_unit) && isset($lineitem->lineitem_total) && $lineitem->lineitem_unit == '0x0' && $lineitem->lineitem_total > 0) ? 'd-none' : '' }}">
             <span class="input-group-addon" id="fx-line-item-hrs" >{{ cleanLang(__('lang.units_height')) }}<small><br>(in mm)</small><br/></span>
