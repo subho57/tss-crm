@@ -22,7 +22,9 @@
         @endif
     </td>
     <td class="items_col_description">
+        @if(strrpos($item->item_description ?? ' ( ) ', ')') != false)
         {{ explode(')', explode('(', $item->item_description ?? ' ( ) ')[1])[0] }}
+        @endif
     </td>
     <td class="items_col_rate" id="items_col_rate_{{ $item->item_id }}">
         {{ runtimeMoneyFormat($item->item_rate) }} 
