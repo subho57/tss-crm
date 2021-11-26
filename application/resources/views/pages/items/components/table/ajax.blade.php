@@ -16,10 +16,13 @@
     @endif
     <td class="items_col_description" id="items_col_description_{{ $item->item_id }}">
         @if(config('settings.trimmed_title'))
-        {{ str_limit($item->item_description ?? '---', 45) }}
+        {{ str_limit(explode('(', $item->item_description ?? ' ( ) ')[0], 45) }}
         @else
-        {{ $item->item_description }}
+        {{ explode('(', $item->item_description ?? ' ( ) ')[0] }}
         @endif
+    </td>
+    <td class="items_col_description">
+        {{ explode(')', explode('(', $item->item_description ?? ' ( ) ')[1])[0] }}
     </td>
     <td class="items_col_rate" id="items_col_rate_{{ $item->item_id }}">
         {{ runtimeMoneyFormat($item->item_rate) }} 
@@ -27,7 +30,6 @@
         per m<sup>2</sup>
         @endif
     </td>
-    {{-- <td class="items_col_unit" id="items_col_unit_{{ $item->item_id }}">{{ $item->item_unit }}</td> --}}
     @if(config('visibility.items_col_category'))
     <td class="items_col_category ucwords" id="items_col_category_{{ $item->item_id }}">
         {{ str_limit($item->category_name ?? '---', 30) }}</td>
