@@ -422,7 +422,7 @@ return [
     'departments' => "Departments",
     'descending_order' => "Descending Order",
     'description_no_html' => "Description should not contain any HTML",
-    'description' => "Product Name",
+    'description' => "Description",
     'design' => "Design",
     'detach_from_project' => "Detach From Project",
     'details' => "Details",
@@ -1487,7 +1487,6 @@ return [
     'user' => "User",
     'username' => "Username",
     'users' => "Users",
-    'variation' => "Variation Name"
     'value' => "Value",
     'values_do_no_match' => 'values do not match',
     'vat_tax_number' => "VAT/TAX Number",

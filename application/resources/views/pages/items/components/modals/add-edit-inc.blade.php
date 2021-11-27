@@ -1,7 +1,7 @@
 <div class="row">
     <div class="col-lg-12">
 
-        <!--product name-->
+        <!--description-->
         <div class="form-group row">
             <label class="col-sm-12 col-lg-3 text-left control-label col-form-label  required">{{ cleanLang(__('lang.description')) }}*</label>
             <div class="col-sm-12 col-lg-9">
@@ -9,15 +9,7 @@
                     >{{ $item->item_description ?? '' }}</textarea>
             </div>
         </div>
-        
-        <!--variation name-->
-        <div class="form-group row">
-            <label class="col-sm-12 col-lg-3 text-left control-label col-form-label  required">{{ cleanLang(__('lang.variation')) }}*</label>
-            <div class="col-sm-12 col-lg-9">
-                <textarea class="w-100" id="item_description" rows="5" name="item_variation"
-                    >{{ $item->item_description ?? '' }}</textarea>
-            </div>
-        </div>
+
 
         <!--rate-->
         <div class="form-group row">
