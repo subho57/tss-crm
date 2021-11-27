@@ -11342,13 +11342,13 @@ div.boards::-webkit-scrollbar {
     .invoice .invoice-wrapper .invoice-table-wrapper .invoice-table.editing th.x-description,
     .estimate .invoice-wrapper .invoice-table-wrapper .invoice-table.editing th.x-description {
       width: auto;
-      min-width: 350px; }
+      min-width: 310px; }
     .invoice .invoice-wrapper .invoice-table-wrapper .invoice-table.editing th.x-quantity,
     .estimate .invoice-wrapper .invoice-table-wrapper .invoice-table.editing th.x-quantity {
       width: 60px; }
     .invoice .invoice-wrapper .invoice-table-wrapper .invoice-table.editing th.x-unit,
     .estimate .invoice-wrapper .invoice-table-wrapper .invoice-table.editing th.x-unit {
-      width: 180px; }
+      width: 220px; }
     .invoice .invoice-wrapper .invoice-table-wrapper .invoice-table.editing th.x-tax,
     .estimate .invoice-wrapper .invoice-table-wrapper .invoice-table.editing th.x-tax {
       width: auto; }
