@@ -261,7 +261,8 @@ NXINVOICE.DOM.itemNewLine = function (data = {}) {
     console.log("prod_cat",item_category);
     if(item_category == 'Static') {
         console.log('here');
-        lineitem.find('div').css({"display":"none"});
+        // lineitem.find('div').css({"display":"none"});
+        lineitem.find(".static-class").css({"display":"none"});
         lineitem.find(".js_item_unit").css({"display":"none"});
         lineitem.find(".js_item_unit_height").css({"display":"none"});
         lineitem.find(".js_item_unit_width").css({"display":"none"});
