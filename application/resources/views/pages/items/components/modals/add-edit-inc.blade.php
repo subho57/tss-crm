@@ -5,7 +5,7 @@
         <div class="form-group row">
             <label class="col-sm-12 col-lg-3 text-left control-label col-form-label  required">Product Name*</label>
             <div class="col-sm-12 col-lg-9">
-                <textarea class="w-100" id="item_description" rows="5" name="item_description"
+                <textarea class="w-100" id="item_description" rows="3" name="item_description"
                     >{{ explode('&$;', $item->item_description ?? ' &$; ')[0] }}</textarea>
             </div>
         </div>
