@@ -245,7 +245,9 @@ NXINVOICE.DOM.itemNewLine = function (data = {}) {
 
 
     //prefill if any data has been sent
-    lineitem.find(".js_item_description").html(item_description);
+    lineitem.find(".js_item_product").val(item_description.split('&$;')[0]);
+    lineitem.find(".js_item_variation").val(item_description.split('&$;')[1]);
+    lineitem.find(".js_item_description").html(item_description.split('&$;')[2]);
     // lineitem.find(".js_item_category").val(item_category);
     lineitem.find(".js_item_quantity").val(item_quantity);
     lineitem.find(".js_item_unit").val(item_unit);
@@ -272,6 +274,8 @@ NXINVOICE.DOM.itemNewLine = function (data = {}) {
     lineitem.attr('id', uniqueid);
 
     //change field names to name='foo[xxx]' array with unique id
+    lineitem.find(".js_item_product").attr("name", "js_item_product[" + uniqueid + "]");
+    lineitem.find(".js_item_variation").attr("name", "js_item_variation[" + uniqueid + "]");
     lineitem.find(".js_item_description").attr("name", "js_item_description[" + uniqueid + "]");
     // lineitem.find(".js_item_category").attr("name", "js_item_category[" + uniqueid + "]");
     lineitem.find(".js_item_quantity").attr("name", "js_item_quantity[" + uniqueid + "]");

@@ -21,7 +21,7 @@
                                 id="sort_item_description" href="javascript:void(0)"
                                 data-url="{{ urlResource('/items?action=sort&orderby=item_description&sortorder=asc') }}">Product Name<span
                                     class="sorting-icons"><i class="ti-arrows-vertical"></i></span></a></th>
-                        <th class="items_col_description">Variant</th>
+                        <th class="items_col_description">Material</th>
                         <th class="items_col_rate"><a class="js-ajax-ux-request js-list-sorting" id="sort_item_rate"
                                 href="javascript:void(0)"
                                 data-url="{{ urlResource('/items?action=sort&orderby=item_rate&sortorder=asc') }}">{{ cleanLang(__('lang.rate')) }}<span

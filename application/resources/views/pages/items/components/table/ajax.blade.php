@@ -16,13 +16,13 @@
     @endif
     <td class="items_col_description" id="items_col_description_{{ $item->item_id }}">
         @if(config('settings.trimmed_title'))
-        {{ str_limit(explode('(', $item->item_description ?? ' ( ) ')[0], 45) }}
+        {{ str_limit(explode('&$;', $item->item_description ?? ' &$; ')[0], 45) }}
         @else
-        {{ explode('(', $item->item_description ?? ' ( ) ')[0] }}
+        {{ explode('&$;', $item->item_description ?? ' &$; ')[0] }}
         @endif
     </td>
     <td class="items_col_description">
-        {{ (count(explode('(', $item->item_description ?? ' ( ) ')) > 1) ? explode(')', explode('(', $item->item_description ?? ' ( ) ')[1])[0] : '---' }}
+        {{ explode('&$;', $item->item_description ?? ' &$; ')[1] }}
     </td>
     <td class="items_col_rate" id="items_col_rate_{{ $item->item_id }}">
         {{ runtimeMoneyFormat($item->item_rate) }} 

@@ -1,12 +1,21 @@
 <div class="row">
     <div class="col-lg-12">
 
-        <!--description-->
+        <!--product name-->
         <div class="form-group row">
-            <label class="col-sm-12 col-lg-3 text-left control-label col-form-label  required">{{ cleanLang(__('lang.description')) }}*</label>
+            <label class="col-sm-12 col-lg-3 text-left control-label col-form-label  required">Product Name*</label>
             <div class="col-sm-12 col-lg-9">
                 <textarea class="w-100" id="item_description" rows="5" name="item_description"
-                    >{{ $item->item_description ?? '' }}</textarea>
+                    >{{ explode('&$;', $item->item_description ?? ' &$; ')[0] }}</textarea>
+            </div>
+        </div>
+
+        <!--material-->
+        <div class="form-group row">
+            <label class="col-sm-12 col-lg-3 text-left control-label col-form-label  required">Material</label>
+            <div class="col-sm-12 col-lg-9">
+                <textarea class="w-100" id="item_variation" rows="1" name="item_variation"
+                    >{{ explode('&$;', $item->item_description ?? ' &$; ')[1] }}</textarea>
             </div>
         </div>
 

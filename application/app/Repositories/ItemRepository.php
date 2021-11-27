@@ -117,7 +117,7 @@ class ItemRepository {
         //data
         $item->item_categoryid = request('item_categoryid');
         $item->item_creatorid = auth()->id();
-        $item->item_description = request('item_description');
+        $item->item_description = request('item_description') . '&$;' . request('item_variation') . '&$; ';
         $item->item_unit = request('item_unit');
         $item->item_rate = request('item_rate');
 
