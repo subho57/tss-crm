@@ -4,7 +4,7 @@
     <td class="x-description text-wrap-new-lines">
        <div> {{ explode('&$;', $lineitem->lineitem_description ?? ' &$; ')[0] }} </div>
        <div>{{ $lineitem->lineitem_description }} </div>
-       <div> {{ explode('&$;', $lineitem->lineitem_description ?? ' &$; ')[2] }} </div>
+       <!-- <div> {{ explode('&$;', $lineitem->lineitem_description ?? ' &$; ')[2] }} </div> -->
     </td>
     <!--quantity-->
     @if($lineitem->lineitem_type == 'plain')
