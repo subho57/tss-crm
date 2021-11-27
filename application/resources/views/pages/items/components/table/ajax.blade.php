@@ -22,7 +22,7 @@
         @endif
     </td>
     <td class="items_col_description">
-        @if(strrpos($item->item_description, ')') !== false)
+        @if(strrpos($item->item_description, ')'))
         {{ explode(')', explode('(', $item->item_description)[1])[0] }}
         @endif
     </td>
