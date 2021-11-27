@@ -2,8 +2,9 @@
 <tr>
     <!--description-->
     <td class="x-description text-wrap-new-lines">
-       <div> Product -{{ explode('&$;', $lineitem->lineitem_description ?? '--')[0] }}
-        
+       <div> {{explode('&$;', $lineitem->lineitem_description ?? '--')[0] }}
+       Material - {{ explode('&$;', $lineitem->lineitem_description)[1] ?? '--'}}
+        {{explode('&$;', $lineitem->lineitem_description)[2] ?? '--'}}
         </div>     
     </td>
     <!--quantity-->
