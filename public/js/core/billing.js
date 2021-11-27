@@ -219,7 +219,7 @@ NXINVOICE.DOM.itemNewLine = function (data = {}) {
     console.log("height", item_unit_height);
     console.log("width", item_unit_width);
     var item_quantity = (data.item_quantity != null) ? data.item_quantity : '';
-    var item_description = (data.item_description != null) ? data.item_description : '';
+    var item_description = (data.item_description != null) ? data.item_description : ' &$; ';
     var item_category = (data.item_category != null) ? data.item_category : '';
     var item_rate = (data.item_rate != null) ? data.item_rate : '';
     var item_total = (data.item_total != null) ? data.item_total : '';
@@ -247,7 +247,7 @@ NXINVOICE.DOM.itemNewLine = function (data = {}) {
     //prefill if any data has been sent
     lineitem.find(".js_item_product").val(item_description.split('&$;')[0]);
     lineitem.find(".js_item_variation").val(item_description.split('&$;')[1]);
-    lineitem.find(".js_item_description").html(item_description.split('&$;')[2]);
+    // lineitem.find(".js_item_description").html(item_description.split('&$;')[2]);
     // lineitem.find(".js_item_category").val(item_category);
     lineitem.find(".js_item_quantity").val(item_quantity);
     lineitem.find(".js_item_unit").val(item_unit);
