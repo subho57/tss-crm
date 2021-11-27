@@ -117,14 +117,14 @@ class ItemRepository {
         //data
         $item->item_categoryid = request('item_categoryid');
         $item->item_creatorid = auth()->id();
-        $item->item_description = request('item_description');
+        $item->item_description = request('item_description')."(".request('item_description').")";
         $item->item_unit = request('item_unit');
         $item->item_rate = request('item_rate');
 
         //save and return id
         if ($item->save()) {
             return $item->item_id;
-        } else { 
+        } else {
             Log::error("unable to create record - database error", ['process' => '[ItemRepository]', config('app.debug_ref'), 'function' => __function__, 'file' => basename(__FILE__), 'line' => __line__, 'path' => __file__]);
             return false;
         }
