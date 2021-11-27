@@ -1,7 +1,11 @@
 @foreach($lineitems as $lineitem)
 <tr>
     <!--description-->
-    <td class="x-description text-wrap-new-lines">{{ $lineitem->lineitem_description }}</td>
+    <td class="x-description text-wrap-new-lines">
+       <div> {{ explode('&$;', $lineitem->lineitem_description ?? ' &$; ')[0] }} </div>
+       <div> Material-{{ explode('&$;', $lineitem->lineitem_description ?? ' &$; ')[1] }} </div>
+       <div> {{ explode('&$;', $lineitem->lineitem_description ?? ' &$; ')[2] }} </div>
+    </td>
     <!--quantity-->
     @if($lineitem->lineitem_type == 'plain')
     <td class="x-quantity">{{ $lineitem->lineitem_quantity }}</td>
