@@ -2,7 +2,7 @@
 <tr>
     <!--description-->
     <td class="x-description text-wrap-new-lines">
-       <div> {{ explode('&$;', $lineitem->lineitem_description ?? ' &$; ')[0] }} </div>
+       <div> {{ explode('&$;', $lineitem->lineitem_description ?? '&$;')[0] }} </div>
        
     </td>
     <!--quantity-->
