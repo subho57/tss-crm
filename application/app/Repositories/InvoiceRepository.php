@@ -531,7 +531,7 @@ class InvoiceRepository {
                     }
 
                     $line = [
-                        'lineitem_description' => request('js_item_product')[$key] . '&$;' . request('js_item_variation')[$key] . '&$;' . request('js_item_description')[$key],
+                        'lineitem_description' => request('js_item_description')[$key] . '&$;' . request('js_item_variation')[$key] . '&$;' . request('js_item_product')[$key],
                         'lineitem_quantity' => request('js_item_quantity')[$key],
                         'lineitem_rate' => request('js_item_rate')[$key],
                         'lineitem_unit' => request('js_item_unit_height')[$key] . "x" . request('js_item_unit_width')[$key],

@@ -245,7 +245,7 @@ NXINVOICE.DOM.itemNewLine = function (data = {}) {
 
 
     //prefill if any data has been sent
-    lineitem.find(".js_item_product").val(item_description.split('&$;')[0]);
+    lineitem.find(".js_item_description").val(item_description.split('&$;')[0]);
     lineitem.find(".js_item_variation").val(item_description.split('&$;')[1]);
     // lineitem.find(".js_item_description").html(item_description.split('&$;')[2]);
     // lineitem.find(".js_item_category").val(item_category);
