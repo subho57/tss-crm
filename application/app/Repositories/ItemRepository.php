@@ -124,7 +124,7 @@ class ItemRepository {
         //save and return id
         if ($item->save()) {
             return $item->item_id;
-        } else {
+        } else { 
             Log::error("unable to create record - database error", ['process' => '[ItemRepository]', config('app.debug_ref'), 'function' => __function__, 'file' => basename(__FILE__), 'line' => __line__, 'path' => __file__]);
             return false;
         }
