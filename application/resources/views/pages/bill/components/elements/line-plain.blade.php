@@ -15,8 +15,8 @@
         </div>
         <div class="input-group input-group-sm m-b-4">
         <span class="input-group-addon" id="fx-line-item-hrs" >Material</span>
-        <input type="text" class="form-control form-control-sm js_item_variantion js_line_validation_item" placeholder="Material"
-            name="js_item_variantion[{{ $lineitem->lineitem_id ?? '' }}]" value="{{ explode('&$;', $lineitem->lineitem_description ?? ' &$; ')[1] }}" >
+        <input type="text" class="form-control form-control-sm js_item_variation js_line_validation_item" placeholder="Material"
+            name="js_item_variation[{{ $lineitem->lineitem_id ?? '' }}]" value="{{ explode('&$;', $lineitem->lineitem_description ?? ' &$; ')[1] }}" >
         </div>
         <div class="input-group input-group-sm">
         <textarea class="form-control form-control-sm js_item_description js_line_validation_item" rows="4" placeholder="Description"
