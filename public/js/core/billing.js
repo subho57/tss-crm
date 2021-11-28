@@ -278,6 +278,7 @@ NXINVOICE.DOM.itemNewLine = function (data = {}) {
     lineitem.find(".js_item_product").attr("name", "js_item_product[" + uniqueid + "]");
     lineitem.find(".js_item_variation").attr("name", "js_item_variation[" + uniqueid + "]");
     lineitem.find(".js_item_description").attr("name", "js_item_description[" + uniqueid + "]");
+    lineitem.find(".js_item_job").attr("name", "js_item_job[" + uniqueid + "]");
     // lineitem.find(".js_item_category").attr("name", "js_item_category[" + uniqueid + "]");
     lineitem.find(".js_item_quantity").attr("name", "js_item_quantity[" + uniqueid + "]");
     lineitem.find(".js_item_unit").attr("name", "js_item_unit[" + uniqueid + "]");
@@ -398,6 +399,7 @@ NXINVOICE.CALC.recalculateLines = function () {
 
         //each input fields
         var description = lineitem.find(".js_item_description");
+        var job = lineitem.find(".js_item_job").val();
         var quantity = lineitem.find(".js_item_quantity").val();
         var unit = lineitem.find(".js_item_unit_height");
         var unit_height = lineitem.find(".js_item_unit_height").val();
@@ -467,10 +469,10 @@ NXINVOICE.CALC.recalculateLines = function () {
             if(quantity > 0 && rate > 0) {
                 var linetotal = 0;
                 if ( unit.css('display') == 'none' || unit.css("visibility") == "hidden") {
-                    linetotal = quantity * rate;
+                    linetotal = quantity * rate * job;
                 } else if (unit_width > 0 && unit_height > 0) {
                     var sqmm = unit_width * unit_height / 1000000;
-                    linetotal = quantity * rate * sqmm;
+                    linetotal = quantity * rate * sqmm * job;
                 }
                 total.val(nxFormatDecimal(linetotal));
                 //work out tax
