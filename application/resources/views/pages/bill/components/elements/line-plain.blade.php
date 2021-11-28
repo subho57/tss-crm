@@ -52,7 +52,7 @@
         </div>
 
         <div class="input-group input-group-sm ">
-            <span class="input-group-addon" id="fx-line-item-min">Job Complexity</small></span>
+            <span class="input-group-addon" id="fx-line-item-min">Job <small>Complexity</small></span>
             <select class="js_item_job" aria-labelledby="bd-versions" >
                 <option class="dropdown-item" >Default</option>
                 <option class="dropdown-item" >2</option>
