@@ -409,6 +409,8 @@ NXINVOICE.CALC.recalculateLines = function () {
         var selected_taxes = lineitem.find(".js_linetax_rate");
         var tax = lineitem.find(".js_linetax_total");
 
+        console.log(job);
+        
         //for time items
         var hours = lineitem.find(".js_item_hours").val();
         var minutes = lineitem.find(".js_item_minutes").val();
@@ -465,6 +467,7 @@ NXINVOICE.CALC.recalculateLines = function () {
          * --------------------------------------------------*/
         if (type == 'plain') {
             NXINVOICE.log("Height and Width Hidden check");
+            NXINVOICE.log("job",job);
             //if row is valid, workout total
             if(quantity > 0 && rate > 0) {
                 var linetotal = 0;

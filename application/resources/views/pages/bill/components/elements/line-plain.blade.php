@@ -58,8 +58,8 @@
                 <option class="dropdown-item active" >2</option>
                 <option class="dropdown-item active" >3</option>
             </select>
-            <input type="number" class="form-control js_item_unit_width calculation-element js_line_validation_item {{ (isset($lineitem->lineitem_unit) && isset($lineitem->lineitem_total) && $lineitem->lineitem_unit == '0x0' && $lineitem->lineitem_total > 0) ? 'd-none' : '' }}" name="js_item_unit_width[{{ $lineitem->lineitem_id ?? '' }}]" 
-            value="{{ explode('x', $lineitem->lineitem_unit ?? '0x0')[1] }}">
+            <!-- <input type="number" class="form-control js_item_unit_width calculation-element js_line_validation_item {{ (isset($lineitem->lineitem_unit) && isset($lineitem->lineitem_total) && $lineitem->lineitem_unit == '0x0' && $lineitem->lineitem_total > 0) ? 'd-none' : '' }}" name="js_item_unit_width[{{ $lineitem->lineitem_id ?? '' }}]" 
+            value="{{ explode('x', $lineitem->lineitem_unit ?? '0x0')[1] }}"> -->
         </div>
         {{-- <input class="form-control form-control-sm js_item_unit js_line_validation_item" type="text"
             name="js_item_unit[{{ $lineitem->lineitem_id ?? '' }}]" value="{{ $lineitem->lineitem_unit ?? '' }}"> --}}
