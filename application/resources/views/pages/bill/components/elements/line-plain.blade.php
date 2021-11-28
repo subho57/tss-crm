@@ -11,7 +11,7 @@
     <td class="form-group x-description bill_col_description">
         <div class="input-group input-group-sm m-b-4">
         <input type="text" class="form-control form-control-sm js_item_description js_line_validation_item" placeholder="Product Name"
-            name="js_item_description[{{ $lineitem->lineitem_id ?? '' }}]" value="{{ explode('&$;', $lineitem->lineitem_description ?? ' &$; ')[0] }}" >
+            name="js_item_description[{{ $lineitem->lineitem_id ?? '' }}]" value="{{ $lineitem->lineitem_description }}" >
         </div>
         <div class="input-group input-group-sm m-b-4">
         <span class="input-group-addon" id="fx-line-item-hrs" >Material</span>
@@ -41,7 +41,7 @@
         <!-- job complexity -->
         <div class="input-group input-group-sm ">
             <span class="input-group-addon" id="fx-line-item-min">Complexity</span>
-            <select class="js_item_job calculation-element" aria-labelledby="bd-versions" >
+            <select name="js_item_job" class="js_item_job calculation-element" style="outline:none" aria-labelledby="bd-versions" >
                 <option class="dropdown-item" >Default</option>
                 <option class="dropdown-item" >2</option>
                 <option class="dropdown-item" >3</option>
