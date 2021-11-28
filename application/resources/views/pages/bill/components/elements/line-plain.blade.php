@@ -38,6 +38,17 @@
     <!--unit-->
     <!--  $lineitem->lineitem_unit -->
     <td class="form-group x-unit bill_col_unit">
+        <!-- job complexity -->
+        <div class="input-group input-group-sm ">
+            <span class="input-group-addon" id="fx-line-item-min">Job <small>Complexity</small></span>
+            <select class="js_item_job" aria-labelledby="bd-versions" >
+                <option class="dropdown-item" >Default</option>
+                <option class="dropdown-item" >2</option>
+                <option class="dropdown-item" >3</option>
+            </select>
+            <!-- <input type="number" class="form-control js_item_unit_width calculation-element js_line_validation_item {{ (isset($lineitem->lineitem_unit) && isset($lineitem->lineitem_total) && $lineitem->lineitem_unit == '0x0' && $lineitem->lineitem_total > 0) ? 'd-none' : '' }}" name="js_item_unit_width[{{ $lineitem->lineitem_id ?? '' }}]" 
+            value="{{ explode('x', $lineitem->lineitem_unit ?? '0x0')[1] }}"> -->
+        </div>
         <!--height-->
         <div class="input-group input-group-sm m-b-4 static-class {{ (isset($lineitem->lineitem_unit) && isset($lineitem->lineitem_total) && $lineitem->lineitem_unit == '0x0' && $lineitem->lineitem_total > 0) ? 'd-none' : '' }}">
             <span class="input-group-addon" id="fx-line-item-hrs" >{{ cleanLang(__('lang.units_height')) }}<small>(in mm)</small></span>
@@ -51,16 +62,7 @@
             value="{{ explode('x', $lineitem->lineitem_unit ?? '0x0')[1] }}">
         </div>
 
-        <div class="input-group input-group-sm ">
-            <span class="input-group-addon" id="fx-line-item-min">Job <small>Complexity</small></span>
-            <select class="js_item_job" aria-labelledby="bd-versions" >
-                <option class="dropdown-item" >Default</option>
-                <option class="dropdown-item" >2</option>
-                <option class="dropdown-item" >3</option>
-            </select>
-            <!-- <input type="number" class="form-control js_item_unit_width calculation-element js_line_validation_item {{ (isset($lineitem->lineitem_unit) && isset($lineitem->lineitem_total) && $lineitem->lineitem_unit == '0x0' && $lineitem->lineitem_total > 0) ? 'd-none' : '' }}" name="js_item_unit_width[{{ $lineitem->lineitem_id ?? '' }}]" 
-            value="{{ explode('x', $lineitem->lineitem_unit ?? '0x0')[1] }}"> -->
-        </div>
+        
         {{-- <input class="form-control form-control-sm js_item_unit js_line_validation_item" type="text"
             name="js_item_unit[{{ $lineitem->lineitem_id ?? '' }}]" value="{{ $lineitem->lineitem_unit ?? '' }}"> --}}
     </td>
