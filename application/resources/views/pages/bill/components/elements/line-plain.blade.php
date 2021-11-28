@@ -20,7 +20,7 @@
         </div>
         <div class="input-group input-group-sm">
         <textarea class="form-control form-control-sm js_item_product js_line_validation_item" rows="4" placeholder="Description"
-            name="js_item_product[{{ $lineitem->lineitem_id ?? '' }}]">{{ explode('&$;', $lineitem->lineitem_description ?? ' &$; &$; ')[3] }}</textarea>
+            name="js_item_product[{{ $lineitem->lineitem_id ?? '' }}]">{{ $lineitem->lineitem_description }}</textarea>
         </div>
     </td>
     <!--category-->
