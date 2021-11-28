@@ -53,7 +53,7 @@
 
         <div class="input-group input-group-sm ">
             <span class="input-group-addon" id="fx-line-item-min">Job Complexity</small></span>
-            <div class="dropdown-menu dropdown-menu-right js_item_job" aria-labelledby="bd-versions" value="{{ explode('&$;', $lineitem->lineitem_description ?? ' default ')[3] }}">
+            <div class="dropdown-menu dropdown-menu-right js_item_job" aria-labelledby="bd-versions" >
                 <li class="dropdown-item active" >Default</li>
                 <li class="dropdown-item active" >2</li>
                 <li class="dropdown-item active" >3</li>
