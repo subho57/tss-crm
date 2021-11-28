@@ -40,7 +40,7 @@
     <td class="form-group x-unit bill_col_unit">
         <!-- job complexity -->
         <div class="input-group input-group-sm ">
-            <span class="input-group-addon" id="fx-line-item-min">Job <small>Complexity</small></span>
+            <span class="input-group-addon" id="fx-line-item-min">Complexity</span>
             <select class="js_item_job" aria-labelledby="bd-versions" >
                 <option class="dropdown-item" >Default</option>
                 <option class="dropdown-item" >2</option>
