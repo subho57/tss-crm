@@ -20,7 +20,7 @@
         </div>
         <div class="input-group input-group-sm">
         <textarea class="form-control form-control-sm js_item_product js_line_validation_item" rows="4" placeholder="Description"
-            name="js_item_product[{{ $lineitem->lineitem_id ?? '' }}]">{{ $lineitem->lineitem_description }}</textarea>
+            name="js_item_product[{{ $lineitem->lineitem_id ?? '' }}]">{{ explode('&$;', $lineitem->lineitem_description ?? ' &$; &$; ')[2] }}</textarea>
         </div>
     </td>
     <!--category-->
@@ -41,7 +41,7 @@
         <!-- job complexity -->
         <div class="input-group input-group-sm ">
             <span class="input-group-addon" id="fx-line-item-min">Complexity</span>
-            <select name="js_item_job" class="js_item_job calculation-element" style="outline:none" aria-labelledby="bd-versions" >
+            <select name="js_item_job" class="js_item_job calculation-element" style="outline:none,border:1px solid #fff" aria-labelledby="bd-versions" >
                 <option class="dropdown-item" >Default</option>
                 <option class="dropdown-item" >2</option>
                 <option class="dropdown-item" >3</option>
