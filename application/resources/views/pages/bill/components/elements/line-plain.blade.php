@@ -19,8 +19,9 @@
             name="js_item_variation[{{ $lineitem->lineitem_id ?? '' }}]" value="{{ explode('&$;', $lineitem->lineitem_description ?? ' &$; ')[1] }}" >
         </div>
         <div class="input-group input-group-sm">
-        Description
-        <br/>
+            Descrption
+        </div>
+        <div class="input-group input-group-sm m-b-4">
         <textarea class="form-control form-control-sm js_item_product js_line_validation_item" rows="4" placeholder="Enter description"
             name="js_item_product[{{ $lineitem->lineitem_id ?? '' }}]">{{ explode('&$;', $lineitem->lineitem_description ?? ' &$; &$;')[2] }}</textarea>
         </div>
@@ -42,7 +43,7 @@
              value="{{  explode('x', $lineitem->lineitem_unit ?? '0x0')[0] }}">
         </div>
         <!--width-->
-        <div class="input-group input-group-sm m-b-8 static-class {{ (isset($lineitem->lineitem_unit) && isset($lineitem->lineitem_total) && $lineitem->lineitem_unit == '0x0' && $lineitem->lineitem_total > 0) ? 'd-none' : '' }}">
+        <div class="input-group input-group-sm m-b-50 static-class {{ (isset($lineitem->lineitem_unit) && isset($lineitem->lineitem_total) && $lineitem->lineitem_unit == '0x0' && $lineitem->lineitem_total > 0) ? 'd-none' : '' }}">
             <span class="input-group-addon" id="fx-line-item-min">{{ cleanLang(__('lang.units_width')) }}<small>(in mm)</small></span>
             <input type="number" class="form-control js_item_unit_width calculation-element js_line_validation_item {{ (isset($lineitem->lineitem_unit) && isset($lineitem->lineitem_total) && $lineitem->lineitem_unit == '0x0' && $lineitem->lineitem_total > 0) ? 'd-none' : '' }}" name="js_item_unit_width[{{ $lineitem->lineitem_id ?? '' }}]" 
             value="{{ explode('x', $lineitem->lineitem_unit ?? '0x0')[1] }}">
@@ -50,13 +51,12 @@
 
         <!-- job complexity -->
         <div class="input-group input-group-sm ">
-            <span class="input-group-addon" id="fx-line-item-min">Job Complexity</span>
-            <select name="js_item_job[{{ $lineitem->lineitem_id ?? '' }}]" 
-            value="{{ explode('&$;', $lineitem->lineitem_description ?? ' &$; &$; &$;1')[3] }}"
+            <span class="input-group-addon" id="fx-line-item-min">Complexity</span>
+            <select name="js_item_job[{{ $lineitem->lineitem_id ?? '' }}]"
             class="form-control form-control-sm select2-x js_item_job calculation-element js_line_validation_item" aria-labelledby="bd-versions" >
-                <option class="dropdown-item" >1</option>
-                <option class="dropdown-item" >2</option>
-                <option class="dropdown-item" >3</option>
+                <option class="dropdown-item" {{ explode('&$;', $lineitem->lineitem_description ?? ' &$; &$; &$;1')[3] == "1" ? 'selected' : '' }} >1</option>
+                <option class="dropdown-item" {{ explode('&$;', $lineitem->lineitem_description ?? ' &$; &$; &$;1')[3] == "2" ? 'selected' : '' }} >2</option>
+                <option class="dropdown-item" {{ explode('&$;', $lineitem->lineitem_description ?? ' &$; &$; &$;1')[3] == "3" ? 'selected' : '' }} >3</option>
             </select>
         </div>
         {{-- <input class="form-control form-control-sm js_item_unit js_line_validation_item" type="text"
