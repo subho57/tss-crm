@@ -22,8 +22,8 @@
     @endif
     <!--unit price-->
     <td class="x-unit">
-    {{ (isset($lineitem->lineitem_unit) && $lineitem->lineitem_unit == '0x0' && isset($lineitem->lineitem_total) && $lineitem->lineitem_total > 0) ? ' ' : 'Height: ' . explode('x', $lineitem->lineitem_unit ?? '0x0')[0]  . 'mm'}}
-    {{ (isset($lineitem->lineitem_unit) && $lineitem->lineitem_unit == '0x0' && isset($lineitem->lineitem_total) && $lineitem->lineitem_total > 0) ? ' ' : 'Width: ' . explode('x', $lineitem->lineitem_unit ?? '0x0')[1]  . 'mm'}}    
+    {{ (isset($lineitem->lineitem_unit) && $lineitem->lineitem_unit == '0x0' && isset($lineitem->lineitem_total) && $lineitem->lineitem_total > 0) ? ' ' : 'Height: ' . explode('x', $lineitem->lineitem_unit ?? '0x0')[0]  . ' mm'}}
+    {{ (isset($lineitem->lineitem_unit) && $lineitem->lineitem_unit == '0x0' && isset($lineitem->lineitem_total) && $lineitem->lineitem_total > 0) ? ' ' : 'Width: ' . explode('x', $lineitem->lineitem_unit ?? '0x0')[1]  . ' mm'}}    
     Complexity: {{ (explode('&$;',$lineitem->lineitem_description ?? '&$;&$;&$;1')[3]/10-0.1)*100 }}%
 
     </td>
