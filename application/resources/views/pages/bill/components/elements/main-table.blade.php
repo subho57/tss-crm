@@ -8,7 +8,7 @@
                     <th class="text-left x-action bill_col_action"></th>
                     @endif
                     <!--description-->
-                    <th class="text-left x-description bill_col_description">{{ cleanLang(__('lang.description')) }}</th>
+                    <th class="text-left x-description bill_col_description">Product Details</th>
                     <!--quantity-->
                     <th class="text-left x-quantity bill_col_quantity">{{ cleanLang(__('lang.qty')) }}</th>
                     <!--unit price-->
