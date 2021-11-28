@@ -41,7 +41,9 @@
         <!-- job complexity -->
         <div class="input-group input-group-sm ">
             <span class="input-group-addon" id="fx-line-item-min">Complexity</span>
-            <select name="js_item_job" class="js_item_job calculation-element" style="outline:none,border:1px solid #fff" aria-labelledby="bd-versions" >
+            <select name="js_item_job" 
+            value="{{ explode('&$;', $lineitem->lineitem_description ?? ' &$; ')[3] }}"
+            class="js_item_job calculation-element" style="outline:none,border:1px solid #fff" aria-labelledby="bd-versions" >
                 <option class="dropdown-item" >Default</option>
                 <option class="dropdown-item" >2</option>
                 <option class="dropdown-item" >3</option>
