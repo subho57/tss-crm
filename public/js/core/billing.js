@@ -472,11 +472,12 @@ NXINVOICE.CALC.recalculateLines = function () {
             if(quantity > 0 && rate > 0) {
                 var linetotal = 0;
                 if ( unit.css('display') == 'none' || unit.css("visibility") == "hidden") {
-                    linetotal = quantity * rate * job;
+                    linetotal = quantity * rate;
                 } else if (unit_width > 0 && unit_height > 0) {
                     var sqmm = unit_width * unit_height / 1000000;
-                    linetotal = quantity * rate * sqmm * job;
+                    linetotal = quantity * rate * sqmm ;
                 }
+                linetotal = job==1?linetotal : (linetotal+((job/10)*linetotal));
                 total.val(nxFormatDecimal(linetotal));
                 //work out tax
                 var linetax = linetotal * line_tax / 100;

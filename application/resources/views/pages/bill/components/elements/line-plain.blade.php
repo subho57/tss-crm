@@ -54,9 +54,9 @@
         <div class="input-group input-group-sm ">
             <span class="input-group-addon" id="fx-line-item-min">Job Complexity</small></span>
             <select class="js_item_job" aria-labelledby="bd-versions" >
-                <option class="dropdown-item active" >Default</option>
-                <option class="dropdown-item active" >2</option>
-                <option class="dropdown-item active" >3</option>
+                <option class="dropdown-item" >Default</option>
+                <option class="dropdown-item" >2</option>
+                <option class="dropdown-item" >3</option>
             </select>
             <!-- <input type="number" class="form-control js_item_unit_width calculation-element js_line_validation_item {{ (isset($lineitem->lineitem_unit) && isset($lineitem->lineitem_total) && $lineitem->lineitem_unit == '0x0' && $lineitem->lineitem_total > 0) ? 'd-none' : '' }}" name="js_item_unit_width[{{ $lineitem->lineitem_id ?? '' }}]" 
             value="{{ explode('x', $lineitem->lineitem_unit ?? '0x0')[1] }}"> -->
