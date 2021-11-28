@@ -399,7 +399,7 @@ NXINVOICE.CALC.recalculateLines = function () {
 
         //each input fields
         var description = lineitem.find(".js_item_description");
-        var job = lineitem.find(".js_item_job").val();
+        var job = lineitem.find(".js_item_job").val()=='Default'? 1 : lineitem.find(".js_item_job").val();
         var quantity = lineitem.find(".js_item_quantity").val();
         var unit = lineitem.find(".js_item_unit_height");
         var unit_height = lineitem.find(".js_item_unit_height").val();
@@ -409,8 +409,8 @@ NXINVOICE.CALC.recalculateLines = function () {
         var selected_taxes = lineitem.find(".js_linetax_rate");
         var tax = lineitem.find(".js_linetax_total");
 
-        console.log(job);
-        
+        console.log("job 412",job);
+
         //for time items
         var hours = lineitem.find(".js_item_hours").val();
         var minutes = lineitem.find(".js_item_minutes").val();
